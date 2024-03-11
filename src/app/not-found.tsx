@@ -1,7 +1,7 @@
 import { Button, Flex, Heading } from '@radix-ui/themes';
 import Link from 'next/link';
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 export default function NotFound() {
 	return (

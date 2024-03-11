@@ -1,12 +1,21 @@
-import Header from '@/components/Header';
-import styles from './style.module.scss';
-import { Button } from '@radix-ui/themes';
+import Image from 'next/image';
 
 export default function Home() {
 	return (
-		<main className={styles.Main}>
-			<Header />
+		<div>
+			<div
+				style={{ width: '100%', height: '100%', position: 'relative' }}
+			>
+				<Image
+					src="/um_mall.jpeg"
+					alt="Background image"
+					width={0}
+					height={0}
+					sizes="100vw"
+					className="w-[100%] h-[70%] object-cover"
+				/>
+			</div>
 			<h1>Index</h1>
-		</main>
+		</div>
 	);
 }
