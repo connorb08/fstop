@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
-    "preview": "npm run pages:build && wrangler pages dev .vercel/output/static",
-    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static"
+    "preview": "yarn run pages:build && wrangler pages dev .vercel/output/static",
+    "deploy": "yarn run pages:build && wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
     "next": "14.1.0",
@@ -31,5 +31,6 @@
     "typescript": "^5",
     "vercel": "^33.5.5",
     "wrangler": "^3.32.0"
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }

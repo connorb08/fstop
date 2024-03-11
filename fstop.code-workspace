@@ -1,0 +1,33 @@
+{
+    "folders": [
+        {
+            "path": "src",
+            "name": "src"
+        },
+        {
+            "path": ".",
+            "name": "config"
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/.git": true,
+            "**/.svn": true,
+            "**/.hg": true,
+            "**/CVS": true,
+            "**/.DS_Store": true,
+            "**/Thumbs.db": true,
+            // Ignore yarn files
+            "node_modules": true,
+            ".pnp*": true,
+            ".yarn": true,
+            "yarn.lock": true,
+            // Ignore next files
+            ".next": true,
+            "next-env.d.ts": true,
+            // Ignore workspace files
+            "src": true
+        }
+
+    }
+}
