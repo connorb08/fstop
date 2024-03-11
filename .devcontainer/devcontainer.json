@@ -1,18 +1,20 @@
 {
-    "name": "cumberland-foodstop",
-    "build": {
-        "dockerfile": "./Dockerfile"
-    },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "arcanis.vscode-zipfs",
-                "tamasfe.even-better-toml",
-                "esbenp.prettier-vscode",
-                "bradlc.vscode-tailwindcss",
-                "GitHub.copilot",
-                "GitHub.copilot-chat"
-            ]
-        }
-    }
+	"name": "cumberland-foodstop",
+	"build": {
+		"dockerfile": "./Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"arcanis.vscode-zipfs",
+				"tamasfe.even-better-toml",
+				"esbenp.prettier-vscode",
+				"bradlc.vscode-tailwindcss",
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"csstools.postcss"
+			]
+		}
+	},
+	"postStartCommand": "yarn install"
 }

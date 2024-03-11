@@ -1,42 +1,42 @@
 {
-    "folders": [
-        {
-            "path": "src",
-            "name": "src"
-        },
-        {
-            "path": ".",
-            "name": "config"
-        }
-    ],
-    "settings": {
-        // Formatting
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        // File excludes
-        "files.exclude": {
-            "**/.git": true,
-            "**/.svn": true,
-            "**/.hg": true,
-            "**/CVS": true,
-            "**/.DS_Store": true,
-            "**/Thumbs.db": true,
-            // Ignore yarn files
-            "node_modules": true,
-            ".pnp*": true,
-            ".yarn": true,
-            "yarn.lock": true,
-            // Ignore next files
-            ".next": true,
-            "next-env.d.ts": true,
-            // Ignore workspace files
-            "src": true
-        },
-        "search.exclude": {
-            "**/.yarn": true,
-            "**/.pnp.*": true
-          },
-          "typescript.tsdk": "config/.yarn/sdks/typescript/lib"
-
-    }
+	"folders": [
+		{
+			"path": "src",
+			"name": "src"
+		},
+		{
+			"path": ".",
+			"name": "config"
+		}
+	],
+	"settings": {
+		// Formatting
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		// File excludes
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/Thumbs.db": true,
+			// Ignore yarn files
+			"node_modules": true,
+			".pnp*": true,
+			".yarn": true,
+			"yarn.lock": true,
+			// Ignore next files
+			".next": true,
+			"next-env.d.ts": true,
+			// Ignore workspace files
+			"src": true
+		},
+		"search.exclude": {
+			"**/.yarn": true,
+			"**/.pnp.*": true
+		},
+		"typescript.tsdk": "config/.yarn/sdks/typescript/lib",
+		"files.associations": { "*.scss": "postcss" },
+	}
 }

@@ -1,0 +1,14 @@
+.Header {
+	@apply p-4;
+	@apply bg-gray-100;
+
+	.Content {
+		@apply flex items-center justify-between;
+		@apply mx-10;
+
+		.End {
+			@apply flex;
+			@apply gap-4;
+		}
+	}
+}
