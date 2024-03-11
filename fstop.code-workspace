@@ -10,6 +10,10 @@
         }
     ],
     "settings": {
+        // Formatting
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        // File excludes
         "files.exclude": {
             "**/.git": true,
             "**/.svn": true,
@@ -27,7 +31,12 @@
             "next-env.d.ts": true,
             // Ignore workspace files
             "src": true
-        }
+        },
+        "search.exclude": {
+            "**/.yarn": true,
+            "**/.pnp.*": true
+          },
+          "typescript.tsdk": "config/.yarn/sdks/typescript/lib"
 
     }
 }
