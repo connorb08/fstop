@@ -1,7 +1,7 @@
-import { Flex, Heading, IconButton, Text } from '@radix-ui/themes';
+import { Flex, Heading, Text } from '@radix-ui/themes';
 import style from './style.module.scss';
 import Link from 'next/link';
-import { HamburgerMenuIcon } from '@radix-ui/react-icons';
+import MobileMenu from '../MobileMenu';
 
 export default function Header() {
 	return (
@@ -11,19 +11,20 @@ export default function Header() {
 					<Link href="/">Cumberland Foodstop</Link>
 				</Heading>
 				{/* Normal Display */}
-				<Flex gap="3" className="hidden sm:flex">
+				<span className="hidden sm:flex gap-3">
 					<Link href="/menu">
 						<Text>Menu</Text>
+					</Link>
+					<Link href="/about">
+						<Text>About</Text>
 					</Link>
 					<Link href="/contact">
 						<Text>Contact</Text>
 					</Link>
-				</Flex>
+				</span>
 				{/* Mobile Menu */}
 				<span className="block sm:hidden">
-					<IconButton>
-						<HamburgerMenuIcon width="18" height="18" />
-					</IconButton>
+					<MobileMenu />
 				</span>
 			</div>
 		</div>
