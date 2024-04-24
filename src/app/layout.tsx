@@ -20,7 +20,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className="h-full">
+		<html lang="en" className="h-full bg-black/85">
 			<body className={inter.className + ' h-full flex flex-col'}>
 				<Theme
 					accentColor="mint"

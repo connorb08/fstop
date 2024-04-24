@@ -11,7 +11,7 @@ export default function Header() {
 					<Link href="/">Cumberland Foodstop</Link>
 				</Heading>
 				{/* Normal Display */}
-				<span className="hidden sm:flex gap-3">
+				<span className="hidden sm:flex gap-8">
 					<Link href="/menu">
 						<Text>Menu</Text>
 					</Link>

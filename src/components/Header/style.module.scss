@@ -1,6 +1,8 @@
 .Header {
 	@apply p-4;
-	@apply bg-gray-100;
+	@apply bg-black/85;
+	@apply text-white;
+	//background-color: black;
 
 	.Content {
 		@apply flex items-center justify-between;
