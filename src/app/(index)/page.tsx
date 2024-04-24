@@ -4,7 +4,7 @@ export default function Home() {
 	return (
 		<>
 		<Hero />
-		<div className='bg-black/85 text-white'>
+		<div>
 			Site info
 		</div>
 		</>

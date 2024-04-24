@@ -3,26 +3,24 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const cards = [
-	{
-		name: 'Menu',
-		description:
-			'View our menu',
-		icon: NewspaperIcon,
-		href: "#"
-	},
+
 	{
 		name: 'Contact Us',
-		description:
-			"(207) 123-4567",
+		description: <><p>(207) 123-4567</p><p>Mon-Fri: 6am-9pm</p><p>Sat: 7am-9pm</p></>,
 		icon: PhoneIcon,
-		href: "#"
+		href: "phone:2071234567"
+	},
+	{
+		name: 'Menu',
+		description: <p>View our menu</p>,
+		icon: NewspaperIcon,
+		href: "/menu"
 	},
 	{
 		name: 'Wine & Beer',
-		description:
-			'Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit.',
+		description: <p>Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit.</p>,
 		icon: NewspaperIcon,
-		href: "#"
+		href: "/wine"
 	},
 ];
 
@@ -45,7 +43,7 @@ export default function Example() {
 						Cumberland Foodstop
 					</h2>
 					<p className="mt-6 text-lg leading-8 text-white p-4 bg-white/5 rounded-xl">
-					At Cumberland Food Stop, we think good food and quality ingredients should be available to everyone at prices that don’t cost an arm and a leg. We started operating in Cumberland, Maine in 1998. Since then, we’ve seen plenty of changes in the way people approach food — and we couldn’t be more excited. Come and check us out in person and discover something delicious today.
+						At Cumberland Food Stop, we think good food and quality ingredients should be available to everyone at prices that don’t cost an arm and a leg. We started operating in Cumberland, Maine in 1998. Since then, we’ve seen plenty of changes in the way people approach food — and we couldn’t be more excited. Come and check us out in person and discover something delicious today.
 					</p>
 				</div>
 				<div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
@@ -56,16 +54,17 @@ export default function Example() {
 							className="flex gap-x-4 rounded-xl bg-black/50 p-6 ring-1 ring-inset ring-white/10 hover:bg-black/75"
 						>
 							<card.icon
-								className="h-7 w-5 flex-none text-indigo-400"
+								className="h-7 w-5 flex-none"
+								style={{ color: 'var(--teal-9)' }}
 								aria-hidden="true"
 							/>
 							<div className="text-base leading-7">
-								<h3 className="font-semibold text-white">
+								<h3 className="font-semibold text-whit text-xl">
 									{card.name}
 								</h3>
-								<p className="mt-2 text-white text-lg">
+								<div className="mt-2 text-white text-lg">
 									{card.description}
-								</p>
+								</div>
 							</div>
 						</Link>
 					))}

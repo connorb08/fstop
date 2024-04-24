@@ -6,6 +6,7 @@ import '@radix-ui/themes/styles.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -20,19 +21,20 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className="h-full bg-black/85">
+		<html lang="en" className="h-full dark">
 			<body className={inter.className + ' h-full flex flex-col'}>
 				<Theme
-					accentColor="mint"
+					accentColor="teal"
 					grayColor="gray"
 					panelBackground="solid"
 					scaling="100%"
-					radius="full"
+					radius="medium"
+					appearance="dark"
 					asChild
 				>
 					<div className="flex-1 flex flex-col">
 						<Header />
-						<main className="flex-1 flex flex-col">{children}</main>
+						<main className="flex-1 flex flex-col" style={{backgroundColor: "var(--gray-5)"}}>{children}</main>
 						<Footer />
 					</div>
 				</Theme>

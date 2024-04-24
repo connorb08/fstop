@@ -1,0 +1,52 @@
+.Container {
+	@apply flex-1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	height: 80px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+	.Menu {
+		max-width: 1280px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: 1fr;
+		}
+
+		section {
+			@apply rounded-xl;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 10px;
+			margin: 10px;
+			background-color: var(--gray-6);
+
+			h1 {
+				@apply text-2xl;
+				margin-bottom: 10px;
+			}
+
+			ul {
+				padding: 10px;
+				padding-left: 40px;
+				padding-right: 40px;
+
+				li {
+					margin-bottom: 20px;
+					h2 {
+						@apply text-xl;
+					}
+
+					.Price {
+						font-style: italic;
+					}
+				}
+			}
+		}
+	}
+}

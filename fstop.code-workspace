@@ -37,6 +37,11 @@
 			"**/.pnp.*": true
 		},
 		"typescript.tsdk": "config/.yarn/sdks/typescript/lib",
-		"files.associations": { "*.scss": "postcss" },
+		"files.associations": {
+			"*.scss": "postcss"
+		},
+		"[typescriptreact]": {
+			"editor.defaultFormatter": "vscode.typescript-language-features"
+		},
 	}
 }

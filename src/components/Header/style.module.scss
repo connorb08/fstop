@@ -1,6 +1,7 @@
 .Header {
 	@apply p-4;
-	@apply bg-black/85;
+	//@apply bg-black/85;
+	background-color: var(--gray-3);
 	@apply text-white;
 	//background-color: black;
 

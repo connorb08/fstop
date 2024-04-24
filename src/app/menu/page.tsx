@@ -1,3 +1,5 @@
-export default function Menu() {
-	return <div>Menu Page</div>;
+import { Menu } from "@/components/Menu";
+
+export default function MenuPage() {
+	return <Menu />;
 }
