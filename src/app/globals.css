@@ -4,6 +4,7 @@
 
 @import '@radix-ui/colors/gray-dark.css';
 @import '@radix-ui/colors/teal-dark.css';
+@import '@radix-ui/colors/teal-dark-alpha.css';
 
 body {
 	color: var(--gray-12);

@@ -1,0 +1,67 @@
+.Container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+
+	.Card {
+		@apply p-10;
+		@apply min-w-[400px];
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.Form {
+			height: 100%;
+			width: 100%;
+			@apply flex flex-col gap-5;
+			@apply items-center;
+
+			.FileLabel {
+				height: 100%;
+				width: 100%;
+				min-height: 200px;
+				min-width: 400px;
+				@apply flex flex-col;
+				@apply gap-5;
+				@apply items-center;
+				@apply justify-center;
+				@apply border-2;
+				@apply rounded;
+				padding: 10px;
+				border-color: var(--teal-9);
+
+				h1 {
+					@apply text-xl;
+					text-align: center;
+				}
+
+				p {
+					@apply text-lg;
+					text-align: center;
+				}
+
+				&:hover {
+					border-color: var(--teal-10);
+					background-color: var(--teal-a3);
+					cursor: pointer;
+				}
+			}
+
+			.Submit {
+				width: fit-content;
+			}
+
+			.FileInput {
+				display: none;
+			}
+		}
+
+		.Callout {
+			@apply mt-5;
+			width: 100%;
+		}
+	}
+}

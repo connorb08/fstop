@@ -8,6 +8,11 @@
 	height: 80px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
+	.Specials {
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+
 	.Menu {
 		max-width: 1280px;
 		display: grid;
@@ -28,7 +33,6 @@
 
 			h1 {
 				@apply text-2xl;
-				margin-bottom: 10px;
 			}
 
 			ul {
@@ -36,15 +40,23 @@
 				padding-left: 40px;
 				padding-right: 40px;
 
-				li {
-					margin-bottom: 20px;
-					h2 {
+				.Item {
+					.ItemName {
 						@apply text-xl;
 					}
 
 					.Price {
-						font-style: italic;
+						@apply text-lg;
 					}
+
+					.Description {
+						margin-top: 10px;
+						// font-style: italic;
+					}
+				}
+
+				.Separator {
+					margin-bottom: 20px;
 				}
 			}
 		}
