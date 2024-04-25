@@ -1,0 +1,29 @@
+.Hero {
+	@apply relative isolate overflow-hidden py-24 sm:py-32;
+	min-height: 100vh;
+	animation: fade-out linear;
+	animation-timeline: view();
+	animation-range: exit;
+}
+
+@keyframes fade-out {
+	from {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	to {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+}
+
+/* @keyframes fade-in {
+	from {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+} */

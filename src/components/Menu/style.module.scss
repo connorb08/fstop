@@ -13,14 +13,22 @@
 		margin-bottom: 20px;
 	}
 
-	.Menu {
-		max-width: 1280px;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+	.SectionSeparator {
+		@apply my-4;
+		width: 200px;
+		height: 2px;
+		background-color: var(--teal-9);
+	}
 
-		@media screen and (max-width: 768px) {
-			grid-template-columns: 1fr;
-		}
+	.Menu {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 10px;
+		// grid-template-columns: repeat(2, 750px);
+
+		// @media screen and (max-width: 768px) {
+		// 	grid-template-columns: 1fr;
+		// }
 
 		section {
 			@apply rounded-xl;
@@ -30,6 +38,15 @@
 			padding: 10px;
 			margin: 10px;
 			background-color: var(--gray-6);
+
+			// &.DoubleWide {
+			// 	grid-column: span 2;
+			// 	display: grid;
+
+			// 	h1 {
+			// 		text-align: center;
+			// 	}
+			// }
 
 			h1 {
 				@apply text-2xl;
@@ -61,4 +78,13 @@
 			}
 		}
 	}
+}
+
+.MediaCard {
+	background-color: 'var(--gray-5)';
+	padding: 10px;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }

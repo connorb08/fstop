@@ -1,14 +1,15 @@
 import { NewspaperIcon, PhoneIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 import Link from 'next/link';
+import style from "./style.module.css"
 
 const cards = [
 
 	{
 		name: 'Contact Us',
-		description: <><p>(207) 123-4567</p><p>Mon-Fri: 6am-9pm</p><p>Sat: 7am-9pm</p></>,
+		description: <><p>(207) 829-3250</p><p>Mon-Fri: 6am-9pm</p><p>Sat: 7am-9pm</p></>,
 		icon: PhoneIcon,
-		href: "phone:2071234567"
+		href: "tel:207-829-3250"
 	},
 	{
 		name: 'Menu',
@@ -17,16 +18,16 @@ const cards = [
 		href: "/menu"
 	},
 	{
-		name: 'Wine & Beer',
-		description: <p>Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit.</p>,
+		name: 'Facebook',
+		description: <p>Follow our Facebook page for the most up to date info</p>,
 		icon: NewspaperIcon,
-		href: "/wine"
+		href: "https://www.facebook.com/CFoodstop/"
 	},
 ];
 
-export default function Example() {
+export default function Hero() {
 	return (
-		<div className="relative isolate overflow-hidden h-full"> {/* py-24 sm:py-32">*/}
+		<div className={style.Hero}>
 			<Image
 				src="/background/wine.jpg"
 				alt="Background image"
@@ -36,7 +37,7 @@ export default function Example() {
 				className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
 				priority
 			/>
-			<div className='absolute h-full w-full bg-black/50 -z-10'></div>
+			<div className='absolute h-full w-full bg-black/50 -z-10 inset-0'></div>
 			<div className="mx-auto max-w-7xl px-6 lg:px-8 h-full flex flex-col justify-center items-end">
 				<div className="mx-auto max-w-2xl lg:mx-0">
 					<h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl text-center">

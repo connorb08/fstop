@@ -1,6 +1,18 @@
 .Footer {
-	@apply flex justify-center items-center;
+	@apply flex justify-between items-center;
 	background-color: var(--gray-3);
 	@apply text-white;
-	@apply p-10;
+	@apply px-20;
+	@apply py-8;
+	min-height: 10vh;
+
+	@media screen and (max-width: 768px) {
+		@apply flex-col;
+		@apply gap-5;
+	}
+
+	ul {
+		@apply flex;
+		@apply gap-5;
+	}
 }

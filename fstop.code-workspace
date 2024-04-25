@@ -13,6 +13,7 @@
 		// Formatting
 		"editor.formatOnSave": true,
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnPaste": true,
 		// File excludes
 		"files.exclude": {
 			"**/.git": true,
@@ -42,6 +43,6 @@
 		},
 		"[typescriptreact]": {
 			"editor.defaultFormatter": "vscode.typescript-language-features"
-		},
+		}
 	}
 }

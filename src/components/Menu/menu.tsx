@@ -6,7 +6,7 @@ import Image from 'next/image';
 export function Menu() {
     return (
         <div className={style.Container}>
-            <Box maxWidth="1280px" className={style.Specials}>
+            <Box maxWidth="1024px" className={style.Specials}>
                 <Card size="2">
                     <Inset clip="padding-box" side="top" pb="current">
                         <Image
@@ -17,13 +17,14 @@ export function Menu() {
                         />
                     </Inset>
                     <Text as="p" size="3">
-                        <Strong>Our Weekly Specials</Strong>
+                        <Strong>Our Weekly Specials — Updated every Tuesday</Strong>
                     </Text>
                 </Card>
             </Box>
             <div className={style.Menu}>
                 <section>
                     <h1>Sides</h1>
+                    <Separator className={style.SectionSeparator} />
                     <ul>
                         {menu.sides.map((side, index) => (
                             <li key={index}>
@@ -47,18 +48,31 @@ export function Menu() {
                 </section>
                 <section>
                     <h1>Salads</h1>
+                    <Separator className={style.SectionSeparator} />
                     <ul>
                         {menu.salads.map((salad, index) => (
                             <li key={index}>
-                                <h2>{salad.name}</h2>
-                                <p className={style.Price}>${salad.price}</p>
-                                <p>{salad.description}</p>
+                                <div className={style.Item}>
+                                    <div className="flex justify-between">
+                                        <span className={style.ItemName}>
+                                            {salad.name}
+                                        </span>
+                                        <span className={style.Price}>
+                                            ${salad.price}
+                                        </span>
+                                    </div>
+                                    <p className={style.Description}>
+                                        {salad.description}
+                                    </p>
+                                </div>
+                                <Separator my="3" size="4" className={style.Separator} />
                             </li>
                         ))}
                     </ul>
                 </section>
                 <section>
                     <h1>Grill</h1>
+                    <Separator className={style.SectionSeparator} />
                     <ul>
                         {menu.grill_items.map((item, index) => (
                             <li key={index}>
@@ -69,8 +83,9 @@ export function Menu() {
                         ))}
                     </ul>
                 </section>
-                <section>
+                <section className={style.DoubleWide}>
                     <h1>Signature Pies</h1>
+                    <Separator className={style.SectionSeparator} />
                     <ul>
                         {menu.pizzas.pies.map((pizza, index) => (
                             <li key={index}>
@@ -80,7 +95,7 @@ export function Menu() {
                                             {pizza.name}
                                         </span>
                                         <span className={style.Price}>
-                                            ${pizza.price[0]} ${pizza.price[1]}
+                                            ${pizza.price[0]} | ${pizza.price[1]}
                                         </span>
                                     </div>
                                     <p className={style.Description}>
@@ -93,21 +108,22 @@ export function Menu() {
                     </ul>
                 </section>
                 <section>
-                    <h1>Create Your Own Pie</h1>
-                    <ul>
-                        {menu.pizzas.pies.map((pizza, index) => (
+                    <h1>Pizza Your Way</h1>
+                    <Separator className={style.SectionSeparator} />
+                    <ul className='w-full'>
+                        {menu.pizzas.modifications.map((modification, index) => (
                             <li key={index}>
                                 <div className={style.Item}>
                                     <div className="flex justify-between">
                                         <span className={style.ItemName}>
-                                            {pizza.name}
+                                            {modification.name}
                                         </span>
                                         <span className={style.Price}>
-                                            ${pizza.price[0]} ${pizza.price[1]}
+                                            {(typeof modification.price === "number") ? `$${modification.price}` : `$${modification.price[0]} | $${modification.price[1]}`}
                                         </span>
                                     </div>
                                     <p className={style.Description}>
-                                        {pizza.description}
+                                        {(modification.list.length === 0) ? modification.description : modification.list.join(", ")}
                                     </p>
                                 </div>
                                 <Separator my="3" size="4" className={style.Separator} />

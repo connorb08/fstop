@@ -1,3 +1,15 @@
+interface Menu {
+	sides: MenuItem[];
+	salads: MenuItem[];
+	grill_items: MenuItem[];
+	wraps_and_subs: MenuItem[];
+	burgers: MenuItem[];
+	pizzas: {
+		modifications: PizzaModifications[];
+		pies: Pizza[];
+	};
+}
+
 interface MenuItem {
 	name: string;
 	price: number | [number, number];
@@ -5,33 +17,14 @@ interface MenuItem {
 }
 
 interface Pizza extends MenuItem {
-	// [large, small]
 	price: [number, number];
 }
 
 interface PizzaModifications {
-	standard: {
-		// [large, small]
-		price: [number, number];
-		list: string[];
-	};
-	premium: {
-		// [large, small]
-		price: [number, number];
-		list: string[];
-	};
-	extra_cheese: [number, number];
-	gluten_free: number;
-}
-
-interface Menu {
-	sides: MenuItem[];
-	salads: MenuItem[];
-	grill_items: MenuItem[];
-	pizzas: {
-		modifications: PizzaModifications;
-		pies: Pizza[];
-	};
+	name: string;
+	price: [number, number] | number;
+	list: string[];
+	description: string;
 }
 
 export const menu: Menu = {
@@ -39,7 +32,8 @@ export const menu: Menu = {
 		{
 			name: 'Chicken Tenders',
 			price: 8.99,
-			description: '',
+			description:
+				'Crispy chicken tenders served with your choice of dipping sauce.',
 		},
 		{
 			name: 'Boardwalk Fries',
@@ -55,12 +49,13 @@ export const menu: Menu = {
 		{
 			name: 'Onion Rings',
 			price: 5.99,
-			description: '',
+			description: 'Classic onion rings served with ketchup.',
 		},
 		{
 			name: 'Mozzarella Sticks',
 			price: 5.99,
-			description: '',
+			description:
+				'Golden fried mozzarella sticks served with marinara sauce.',
 		},
 		{
 			name: 'Poutine',
@@ -69,23 +64,63 @@ export const menu: Menu = {
 				'French fries smothered in beef gravy with melted cheddar and cheese curds. Add meat for $2.',
 		},
 	],
-	salads: [],
+	salads: [
+		{
+			name: 'Caesar',
+			price: 5.99,
+			description:
+				'Romaine, croutons, and asiago cheese. Served with Caesar dressing.',
+		},
+		{
+			name: 'Garden',
+			price: 5.99,
+			description:
+				'Romaine, tomato, green pepper, mushroom, red onion, cucumber, and shredded carrots.',
+		},
+		{
+			name: 'Greek',
+			price: 7.49,
+			description:
+				'Mix of romaine and spinach, tomato, cucumber, feta cheese, red onion, and olives.',
+		},
+		{
+			name: 'Add Grilled Chicken or Tuna',
+			price: 3.49,
+			description: '',
+		},
+	],
+	wraps_and_subs: [],
 	grill_items: [],
+	burgers: [],
 	pizzas: {
-		modifications: {
-			standard: {
+		modifications: [
+			{
+				name: 'Standard Toppings',
 				price: [2.49, 1.49],
 				list: [
 					'Pepperoni, Ham, Mushroom, Onion, Green Pepper, Kalamata Olive, Pineapple, Spinach, Tomato, Jalapeño, Garlic, Red Onion',
 				],
+				description: '',
 			},
-			premium: {
+			{
+				name: 'Premium Toppings',
 				price: [2.99, 1.99],
 				list: ['Bacon, Sausage, Chicken, Hamburger, Pesto'],
+				description: '',
 			},
-			extra_cheese: [3.49, 2.49],
-			gluten_free: 1.99,
-		},
+			{
+				name: 'Extra Cheese',
+				price: [3.49, 2.49],
+				list: [],
+				description: '',
+			},
+			{
+				name: 'Gluten Free',
+				price: 1.99,
+				list: [],
+				description: 'Make any small into a gluten free crust.',
+			},
+		],
 		pies: [
 			{
 				name: 'Cheeseburger Deluxe',
