@@ -3,7 +3,7 @@ import style from "./style.module.scss"
 
 export default function Wine() {
     return (
-        <div className={style.About}>
+        <div className={style.Wine}>
             <Image
                 src="/images/wine.jpg"
                 alt=""

@@ -1,11 +1,9 @@
 import Image from 'next/image'
 import style from "./style.module.scss"
-import { PaperClipIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link'
 
 export default function Food() {
     return (
-        <div className={style.About}>
+        <div className={style.Food}>
             <Image
                 src="/background/pizza.jpg"
                 alt=""

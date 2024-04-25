@@ -95,6 +95,12 @@ export const menu: Menu = {
 	pizzas: {
 		modifications: [
 			{
+				name: 'Cheese Pizza',
+				price: [14.99, 8.49],
+				list: [],
+				description: '',
+			},
+			{
 				name: 'Standard Toppings',
 				price: [2.49, 1.49],
 				list: [
