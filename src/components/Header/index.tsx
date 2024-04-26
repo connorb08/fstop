@@ -15,11 +15,14 @@ export default function Header() {
 					<Link href="/menu">
 						<Text>Menu</Text>
 					</Link>
-					<Link href="/about">
+					{/* <Link href="/about">
 						<Text>About</Text>
 					</Link>
-					<Link href="/contact">
+					<Link href="/about">
 						<Text>Contact</Text>
+					</Link> */}
+					<Link href="/wine">
+						<Text>Wine</Text>
 					</Link>
 				</span>
 				{/* Mobile Menu */}

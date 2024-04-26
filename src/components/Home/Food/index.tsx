@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import style from "./style.module.scss"
 
 export default function Food() {
@@ -15,10 +16,12 @@ export default function Food() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Food</h2>
-                    <p className="mt-6 p-4 text-lg leading-8 text-white bg-white/5 rounded-xl">
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                        fugiat veniam occaecat fugiat aliqua.
-                    </p>
+                    <Link href="/food">
+                        <p className="mt-6 p-4 text-lg leading-8 text-white bg-white/5 rounded-xl hover:bg-white/20">
+                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
+                            fugiat veniam occaecat fugiat aliqua.
+                        </p>
+                    </Link>
                 </div>
             </div>
 

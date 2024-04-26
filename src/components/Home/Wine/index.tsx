@@ -1,5 +1,6 @@
-import Image from 'next/image'
-import style from "./style.module.scss"
+import Image from 'next/image';
+import style from './style.module.scss';
+import Link from 'next/link';
 
 export default function Wine() {
     return (
@@ -11,17 +12,22 @@ export default function Wine() {
                 height={800}
                 width={800}
             />
-            <div className='absolute h-full w-full bg-black/50 -z-10 inset-0'></div>
+            <div className="absolute h-full w-full bg-black/50 -z-10 inset-0"></div>
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
-                    <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Wine</h2>
-                    <p className="mt-6 p-4 text-lg leading-8 text-white bg-white/5 rounded-xl">
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                        fugiat veniam occaecat fugiat aliqua.
-                    </p>
+                    <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                        Wine
+                    </h2>
+                    <Link href="/wine">
+                        <p className="mt-6 p-4 text-lg leading-8 text-white bg-white/5 rounded-xl hover:bg-white/20">
+                            Our assortment is always in such hot demand that no
+                            matter how hard we try, we can’t seem to keep them on
+                            our shelves for long. Contact us to make sure we have
+                            them in stock or ask us for a delicious alternative.
+                        </p>
+                    </Link>
                 </div>
             </div>
-
         </div>
-    )
+    );
 }

@@ -4925,6 +4925,7 @@ __metadata:
     postcss: "npm:^8"
     react: "npm:^18"
     react-dom: "npm:^18"
+    react-simple-image-slider: "npm:^2.4.1"
     sass: "npm:^1.71.1"
     sharp: "npm:^0.33.2"
     tailwindcss: "npm:^3.4.1"
@@ -7076,6 +7077,13 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 10c0/4952657e6a7b9d661d4ad4dfcef81b9c7fa493e35164abff99c35c0b27b3d172ef7ad70c09416dc44dd14ff2e6b38a5ec7da27e27e90a15cbad36b8fd2fd8054
+  languageName: node
+  linkType: hard
+
+"react-simple-image-slider@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "react-simple-image-slider@npm:2.4.1"
+  checksum: 10c0/111b907f59ae1b5e49aae997a0f84eb5e445b3268275d8a0f4491f509cd59e5c370bead76993df84ca18e7a6a2f2e74ed6f26d3dafcbb4c5c403819cfc1feefe
   languageName: node
   linkType: hard
 
