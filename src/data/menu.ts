@@ -89,16 +89,160 @@ export const menu: Menu = {
 			description: '',
 		},
 	],
-	wraps_and_subs: [],
-	grill_items: [],
-	burgers: [],
+	wraps_and_subs: [
+		{
+			name: 'Greely Institute Wrap',
+			price: 8.99,
+			description:
+				'Creamy ceasar dressing, asiago cheese, croutons, grilled chicken, and romaine.',
+		},
+		{
+			name: 'Buffalo Chicken Wrap',
+			price: 9.99,
+			description:
+				'Fried chicken tossed in buffalo sauce, romaine, and ranch.',
+		},
+		{
+			name: 'Prince Memorial Wrap',
+			price: 8.99,
+			description: 'Cranberry walnut chicken salad and romaine.',
+		},
+		{
+			name: 'Traditional Italian',
+			price: [8.99, 6.49],
+			description: 'Cranberry walnut chicken salad and romaine.',
+		},
+		{
+			name: 'BLT',
+			price: [8.99, 6.49],
+			description: 'Bacon, romaine, and tomato on a sub roll.',
+		},
+		{
+			name: 'Tuna or Chicken Salad',
+			price: [9.99, 7.49],
+			description: '',
+		},
+		{
+			name: 'Spicy Thai Wrap',
+			price: 10.49,
+			description:
+				'Fried chicken tossed in spicy thai sauce, picked carrots, cucumber, and mixed greens.',
+		},
+		{
+			name: 'Turkey Italian',
+			price: [9.49, 6.99],
+			description: '',
+		},
+		{
+			name: 'Poorboy',
+			price: [6.99, 5.49],
+			description: '',
+		},
+		{
+			name: 'Subsitute a gluten free bun',
+			price: 0.99,
+			description: '',
+		},
+	],
+	grill_items: [
+		{
+			name: 'House Panini',
+			price: 10.49,
+			description:
+				'Mixed greens, tomato, pickled red onion, cheddar and StopSauce on a torta bun with choice of grilled chicken, sliced turkey, or sliced smoked brisket.',
+		},
+		{
+			name: 'Caprese',
+			price: 9.49,
+			description:
+				'Fresh mozzarella, tomato, basil, olive oil, and balsamic glaze on a torta bun.',
+		},
+		{
+			name: 'Chicken Philly',
+			price: [9.99, 6.99],
+			description:
+				'Peppers, onion, mushroom, fajita spice, and cheese on a sub roll.',
+		},
+		{
+			name: 'Steak & Cheese',
+			price: [11.99, 7.99],
+			description: 'Peppers, onion, mushroom, and cheese on a sub roll.',
+		},
+		{
+			name: 'Veggie Philly',
+			price: [10.99, 7.49],
+			description:
+				'Veggie based crumbles, peppers, onion, mushrooms, and fajita spice on a sub roll, with or without cheese.',
+		},
+		{
+			name: 'Cuban',
+			price: 9.49,
+			description:
+				'Sliced pork, swiss, house spicy pickle, and spicy mustard on a torta bun.',
+		},
+		{
+			name: 'Chicken Parmigiana',
+			price: 9.99,
+			description:
+				'Chicken tenders, marinara, and pizza cheese on a torta bun.',
+		},
+		{
+			name: 'Pulled Pork',
+			price: 8.99,
+			description:
+				'House smoked pulled pork, sweet slaw, on a torta bun with a choice of traditional, carolina, and bourbon BBQ sauce.',
+		},
+		{
+			name: 'Smoked Brisket',
+			price: 10.99,
+			description: 'Cheddar, BBQ, and caramelized onion on a torta bun.',
+		},
+		{
+			name: 'Pastrami',
+			price: 10.99,
+			description:
+				'House smoked pastrami, jalapeño mayo, spicy mustard, and swiss on a torta bun.',
+		},
+	],
+	burgers: [
+		{
+			name: 'Classic',
+			price: 10.99,
+			description:
+				'American cheese, lettuce, tomato, onion, sweet pickles, and StopSauce.',
+		},
+		{
+			name: 'Trailblazer',
+			price: 11.99,
+			description:
+				'Pepperjack cheese, bacon, lettuce, tomato, pickled jalapeños, and StopSauce.',
+		},
+		{
+			name: 'Deluxe',
+			price: 11.99,
+			description:
+				'American cheese, bacon, lettuce, tomato, mayo, pepper relish, and sweet pickles.',
+		},
+		{
+			name: 'Ranger',
+			price: 12.49,
+			description:
+				'American cheese, bacon, lettuce, tomato, fries, caramelized onion, sweet pickles, and StopSauce.',
+		},
+		{
+			name: 'Cowboy',
+			price: 11.99,
+			description:
+				'American cheese, BBQ pulled pork, onion rings, and StopSauce.',
+		},
+	],
 	pizzas: {
 		modifications: [
 			{
 				name: 'Cheese Pizza',
 				price: [14.99, 8.49],
 				list: [],
-				description: '',
+				description: "16' or 10' cheese pizza.",
 			},
 			{
 				name: 'Standard Toppings',

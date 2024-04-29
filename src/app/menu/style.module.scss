@@ -1,84 +1,10 @@
-// .Container {
-// 	@apply flex-1;
-// 	display: flex;
-// 	flex-direction: column;
-// 	// justify-content: space-between;
-// 	align-items: center;
-// 	padding: 0 20px;
-// 	height: 80px;
-// 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-// 	.Specials {
-// 		margin-top: 30px;
-// 		margin-bottom: 20px;
-// 	}
-
-// 	.Menu {
-// 		display: flex;
-// 		flex-direction: column;
-// 		margin-bottom: 10px;
-
-// 		section {
-// 			// @apply rounded-xl;
-// 			// display: flex;
-// 			// flex-direction: column;
-// 			// align-items: center;
-// 			// padding: 10px;
-// 			// margin: 10px;
-// 			// background-color: var(--gray-6);
-
-// 			h1 {
-// 				@apply text-2xl;
-// 			}
-
-// 			ul {
-// 				padding: 10px;
-// 				padding-left: 40px;
-// 				padding-right: 40px;
-
-// 				.Item {
-// 					.ItemName {
-// 						@apply text-xl;
-// 					}
-
-// 					.Price {
-// 						@apply text-lg;
-// 					}
-
-// 					.Description {
-// 						margin-top: 10px;
-// 					}
-// 				}
-
-// 				.Separator {
-// 					margin-bottom: 20px;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-.MediaCard {
-	background-color: 'var(--gray-5)';
-	padding: 10px;
-	margin: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
 .Item {
 	.ItemName {
 		@apply text-xl;
 		margin-bottom: 10px;
 	}
-
 	.Price {
 		@apply text-lg;
-	}
-
-	.Description {
-		// margin-top: 10px;
 	}
 }
 
@@ -90,9 +16,55 @@
 	width: 200px;
 	height: 2px;
 	background-color: var(--teal-9);
-	@apply my-4;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .MenuHeader {
 	@apply text-2xl;
+	width: 100%;
+	text-align: center;
+}
+
+.MenuRow {
+	@apply flex-col gap-10 lg:gap-0 lg:flex-row;
+	display: flex;
+	width: 100%;
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+}
+
+.MenuSection {
+	@apply flex flex-col items-center w-full px-5 lg:px-10;
+
+	ul {
+		width: 100%;
+	}
+}
+
+.MenuSectionGrid {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	align-items: center;
+
+	ul {
+		@apply w-full mt-5 grid grid-cols-1 lg:grid-cols-2;
+	}
+}
+
+.GridCell {
+	@apply px-5 lg:px-10;
+}
+
+.MenuImageContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.ImageCard {
+	@apply w-11/12 lg:w-10/12;
 }

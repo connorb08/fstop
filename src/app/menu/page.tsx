@@ -1,12 +1,51 @@
+import { classNames } from '@/utils';
 import style from './style.module.scss';
 import menu from '@/data/menu';
 import { Box, Card, Inset, Text, Strong, Separator } from '@radix-ui/themes';
 import Image from 'next/image';
+import Link from 'next/link';
+
+const tabs = [
+	{ name: 'Sides', href: '#sides', },
+	{ name: 'Salads', href: '#salads', },
+	{ name: 'Burgers', href: '#burgers', },
+	{ name: 'Panini & Grill', href: '#grill', },
+	{ name: 'Wraps & Subs', href: '#subs', },
+	{ name: 'Pizza', href: '#pizza', },
+]
+
+function TabNav() {
+
+	return (
+		<div className='flex-1 flex justify-center mb-10'>
+			<div className="flex sm:w-full lg:w-3/4 xl:w-1/2">
+				<nav className="flex-1 isolate grid grid-cols-3 sm:grid-cols-6 divide-x divide-y rounded-lg shadow divide-[var(--gray-4)]" aria-label="Tabs">
+					{tabs.map((tab, tabIdx) => (
+						<Link
+							key={tab.name}
+							href={tab.href}
+							className={classNames(
+								'text-white',
+								tabIdx === 0 ? 'rounded-tl-lg sm:rounded-l-lg border-l border-t border-[var(--gray-4)]' : '',
+								tabIdx === 2 ? 'rounded-tr-lg sm:rounded-none' : '',
+								tabIdx === 3 ? "rounded-bl-lg sm:rounded-none" : "",
+								tabIdx === tabs.length - 1 ? 'rounded-br-lg sm:rounded-r-lg' : '',
+								'group relative min-w-0 flex-1 overflow-hidden py-4 px-4 text-center text-sm font-medium bg-[var(--gray-8)] hover:bg-[var(--gray-10)] focus:z-10'
+							)}
+						>
+							<span>{tab.name}</span>
+						</Link>
+					))}
+				</nav>
+			</div>
+		</div>
+	)
+}
 
 export default function Menu() {
 	return (
 		<div className="flex flex-col items-center mt-10">
-			<Box maxWidth="1024px" className="flex">
+			<Box maxWidth="1024px" className="flex mx-5">
 				<Card size="2">
 					<Inset clip="padding-box" side="top" pb="current">
 						<Image
@@ -24,8 +63,13 @@ export default function Menu() {
 				</Card>
 			</Box>
 
-			<div className="flex flex-col lg:flex-row mt-10 mb-10 w-full">
-				<div className="flex flex-col items-center w-full p-5">
+			<div className='w-full flex mt-10'>
+				<TabNav />
+			</div>
+
+
+			<div className={style.MenuRow}>
+				<div className={style.MenuSection} id="sides">
 					<h1 className={style.MenuHeader}>Sides</h1>
 					<Separator className={style.SectionSeparator} />
 					<ul>
@@ -53,50 +97,77 @@ export default function Menu() {
 						))}
 					</ul>
 				</div>
-				<div className="w-full">
-					<div className="flex flex-col items-center justify-center w-full p-5">
-						<h1 className={style.MenuHeader}>Salads</h1>
-						<Separator className={style.SectionSeparator} />
-						<ul>
-							{menu.salads.map((salad, index) => (
-								<li key={index}>
-									<div className={style.Item}>
-										<div className="flex justify-between">
-											<span className={style.ItemName}>
-												{salad.name}
-											</span>
-											<span className={style.Price}>
-												${salad.price}
-											</span>
-										</div>
-										<p className={style.Description}>
-											{salad.description}
-										</p>
+				<div className={style.MenuSection}>
+					<h1 className={style.MenuHeader} id="salads">Salads</h1>
+					<Separator className={style.SectionSeparator} />
+					<ul>
+						{menu.salads.map((salad, index) => (
+							<li key={index}>
+								<div className={style.Item}>
+									<div className="flex justify-between">
+										<span className={style.ItemName}>
+											{salad.name}
+										</span>
+										<span className={style.Price}>
+											${salad.price}
+										</span>
 									</div>
-									<Separator
-										my="3"
-										size="4"
-										className={style.Separator}
-									/>
-								</li>
-							))}
-						</ul>
-					</div>
+									<p className={style.Description}>
+										{salad.description}
+									</p>
+								</div>
+								<Separator
+									my="3"
+									size="4"
+									className={style.Separator}
+								/>
+							</li>
+						))}
+					</ul>
 				</div>
 			</div>
 
-			{/* Burgers & Wraps images */}
-			<div className="flex flex-col lg:flex-row items-center gap-5  mb-10">
-				<div className="w-full">
+			{/* Burgers */}
+			<div className={style.MenuRow}>
+				<div className={style.MenuSection} id="burgers">
+					<h1 className={style.MenuHeader}>Burgers</h1>
+					<Separator className={style.SectionSeparator} />
+					<ul>
+						{menu.burgers.map((burger, index) => (
+							<li key={index}>
+								<div className={style.Item}>
+									<div className="flex justify-between">
+										<span className={style.ItemName}>
+											{burger.name}
+										</span>
+										<span className={style.Price}>
+											${burger.price}
+										</span>
+									</div>
+									<p className={style.Description}>
+										{burger.description}
+									</p>
+								</div>
+								<Separator
+									my="3"
+									size="4"
+									className={style.Separator}
+								/>
+							</li>
+						))}
+					</ul>
+				</div>
+
+				<div className={style.MenuImageContainer}>
 					<div className="flex justify-center">
-						<Card size="2" className="w-3/4">
+						<Card size="2" className={style.ImageCard}>
 							<Inset clip="padding-box" side="top" pb="current">
 								<Image
 									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
 									src="/images/P1250505.jpg"
-									width={800}
-									height={400}
-									alt=""
+									width={1200}
+									height={600}
+									alt="cheeseburger deluxe"
 								/>
 							</Inset>
 							<Text as="p" size="3">
@@ -106,9 +177,32 @@ export default function Menu() {
 					</div>
 				</div>
 
-				<div className="w-full">
+			</div>
+
+			{/* Panini & Wraps images */}
+			<div className={style.MenuRow}>
+				<div className={style.MenuImageContainer}>
 					<div className="flex justify-center">
-						<Card size="2" className="w-3/4">
+						<Card size="2" className={style.ImageCard}>
+							<Inset clip="padding-box" side="top" pb="current">
+								<Image
+									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
+									src="/images/P1250491.jpg"
+									width={800}
+									height={400}
+									alt=""
+								/>
+							</Inset>
+							<Text as="p" size="3">
+								House Panini
+							</Text>
+						</Card>
+					</div>
+				</div>
+
+				<div className={style.MenuImageContainer}>
+					<div className="flex justify-center">
+						<Card size="2" className={style.ImageCard}>
 							<Inset clip="padding-box" side="top" pb="current">
 								<Image
 									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
@@ -126,74 +220,113 @@ export default function Menu() {
 				</div>
 			</div>
 
-			{/* Burgers and Wraps */}
-			<div className="flex flex-col md:flex-row mt-10 mb-10 w-full">
-				<div className="flex flex-col items-center w-full">
-					<h1 className={style.MenuHeader}>Burgers</h1>
-					<Separator className={style.SectionSeparator} />
-					<ul>
-						{menu.sides.map((side, index) => (
-							<li key={index}>
-								<div className={style.Item}>
-									<div className="flex justify-between">
-										<span className={style.ItemName}>
-											{side.name}
-										</span>
-										<span className={style.Price}>
-											${side.price}
-										</span>
-									</div>
-									<p className={style.Description}>
-										{side.description}
-									</p>
+			{/* Panini & Grill */}
+			<div className={style.MenuSectionGrid}>
+				<h1 className={style.MenuHeader} id="grill">Panini & Grill</h1>
+				<Separator className={style.SectionSeparator} />
+				<ul>
+					{menu.grill_items.map((item, index) => (
+						<li key={index} className={style.GridCell}>
+							<div className={style.Item}>
+								<div className="flex justify-between">
+									<span className={style.ItemName}>
+										{item.name}
+									</span>
+									<span className={style.Price}>
+										${item.price}
+									</span>
 								</div>
-								<Separator
-									my="3"
-									size="4"
-									className={style.Separator}
+								<p className={style.Description}>
+									{item.description}
+								</p>
+							</div>
+							<Separator
+								my="3"
+								size="4"
+								className={style.Separator}
+							/>
+						</li>
+					))}
+				</ul>
+			</div>
+
+			<div className={style.MenuSectionGrid} id="subs">
+				<h1 className={style.MenuHeader}>Wraps & Subs</h1>
+				<Separator className={style.SectionSeparator} />
+				<ul>
+					{menu.wraps_and_subs.map((item, index) => (
+						<li key={index} className={style.GridCell}>
+							<div className={style.Item}>
+								<div className="flex justify-between">
+									<span className={style.ItemName}>
+										{item.name}
+									</span>
+									<span className={style.Price}>
+										${item.price}
+									</span>
+								</div>
+								<p className={style.Description}>
+									{item.description}
+								</p>
+							</div>
+							<Separator
+								my="3"
+								size="4"
+								className={style.Separator}
+							/>
+						</li>
+					))}
+				</ul>
+			</div>
+
+			{/* Pizza Images */}
+			<div className={style.MenuRow}>
+				<div className={style.MenuImageContainer}>
+					<div className="flex justify-center">
+						<Card size="2" className={style.ImageCard}>
+							<Inset clip="padding-box" side="top" pb="current">
+								<Image
+									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
+									src="/images/P1250491.jpg"
+									width={800}
+									height={400}
+									alt=""
 								/>
-							</li>
-						))}
-					</ul>
+							</Inset>
+							<Text as="p" size="3">
+								House Panini
+							</Text>
+						</Card>
+					</div>
 				</div>
-				<div className="w-full">
-					<div className="flex flex-col items-center justify-center w-full">
-						<h1 className={style.MenuHeader}>Wraps & Sandwiches</h1>
-						<Separator className={style.SectionSeparator} />
-						<ul>
-							{menu.salads.map((salad, index) => (
-								<li key={index}>
-									<div className={style.Item}>
-										<div className="flex justify-between">
-											<span className={style.ItemName}>
-												{salad.name}
-											</span>
-											<span className={style.Price}>
-												${salad.price}
-											</span>
-										</div>
-										<p className={style.Description}>
-											{salad.description}
-										</p>
-									</div>
-									<Separator
-										my="3"
-										size="4"
-										className={style.Separator}
-									/>
-								</li>
-							))}
-						</ul>
+
+				<div className={style.MenuImageContainer}>
+					<div className="flex justify-center">
+						<Card size="2" className={style.ImageCard}>
+							<Inset clip="padding-box" side="top" pb="current">
+								<Image
+									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
+									src="/background/pizza.jpg"
+									width={800}
+									height={400}
+									alt=""
+								/>
+							</Inset>
+							<Text as="p" size="3">
+								Chicken Florentine
+							</Text>
+						</Card>
 					</div>
 				</div>
 			</div>
 
-			<div className='w-full flex flex-col items-center mb-10'>
-				<h1 className={style.MenuHeader}>Panini & Grill</h1>
+			{/* Signature Pies */}
+			<div className={style.MenuSectionGrid} id="pizza">
+				<h1 className={style.MenuHeader}>Signature Pies</h1>
 				<Separator className={style.SectionSeparator} />
-				<ul className='mt-5 grid grid-cols-1 lg:grid-cols-2'>
+				<ul>
 					{menu.pizzas.pies.map((pizza, index) => (
-						<li key={index} className='px-10'>
+						<li key={index} className={style.GridCell}>
 							<div className={style.Item}>
 								<div className="flex justify-between">
 									<span className={style.ItemName}>
@@ -218,163 +351,39 @@ export default function Menu() {
 				</ul>
 			</div>
 
-			{/* Pizza Images */}
-			<div className="flex flex-col lg:flex-row items-center gap-5 mt-10 mb-10">
-				<div className="w-full">
-					<div className="flex justify-center">
-						<Card size="2" className="w-3/4">
-							<Inset clip="padding-box" side="top" pb="current">
-								<Image
-									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
-									src="/images/P1250491.jpg"
-									width={800}
-									height={400}
-									alt=""
-								/>
-							</Inset>
-							<Text as="p" size="3">
-								House Panini
-							</Text>
-						</Card>
-					</div>
-				</div>
-
-				<div className="w-full">
-					<div className="flex justify-center">
-						<Card size="2" className="w-3/4">
-							<Inset clip="padding-box" side="top" pb="current">
-								<Image
-									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
-									src="/background/pizza.jpg"
-									width={800}
-									height={400}
-									alt=""
-								/>
-							</Inset>
-							<Text as="p" size="3">
-								Chicken Florentine
-							</Text>
-						</Card>
-					</div>
-				</div>
-			</div>
-
-			{/* Pizzas */}
-			<div className="flex flex-col md:flex-row mt-10 mb-10 w-full p-5">
-				<div className="flex flex-col items-center w-full">
-					<h1 className={style.MenuHeader}>Signature Pies</h1>
-					<Separator className={style.SectionSeparator} />
-					<ul>
-						{menu.pizzas.pies.map((pizza, index) => (
-							<li key={index}>
-								<div className={style.Item}>
-									<div className="flex justify-between">
-										<span className={style.ItemName}>
-											{pizza.name}
-										</span>
-										<span className={style.Price}>
-											${pizza.price[0]} | $
-											{pizza.price[1]}
-										</span>
-									</div>
-									<p className={style.Description}>
-										{pizza.description}
-									</p>
+			{/* Pizza Your Way */}
+			<div className={style.MenuSectionGrid}>
+				<h1 className={style.MenuHeader}>Pizza Your Way</h1>
+				<Separator className={style.SectionSeparator} />
+				<ul>
+					{menu.pizzas.modifications.map((item, index) => (
+						<li key={index} className={style.GridCell}>
+							<div className={style.Item}>
+								<div className="flex justify-between">
+									<span className={style.ItemName}>
+										{item.name}
+									</span>
+									<span className={style.Price}>
+										{(typeof item.price === "number") ? item.price :
+											`$${item.price[0]} | $${item.price[1]}`}
+									</span>
 								</div>
-								<Separator
-									my="3"
-									size="4"
-									className={style.Separator}
-								/>
-							</li>
-						))}
-					</ul>
-				</div>
-				<div className="w-full">
-					<div className="flex flex-col items-center justify-center w-full p-5">
-						<h1 className={style.MenuHeader}>Pizza Your Way</h1>
-						<Separator className={style.SectionSeparator} />
-						<ul>
-							{menu.pizzas.modifications.map((item, index) => (
-								<li key={index}>
-									<div className={style.Item}>
-										<div className="flex justify-between">
-											<span className={style.ItemName}>
-												{item.name}
-											</span>
-											<span className={style.Price}>
-												{(typeof item.price === "number") ? item.price :
-													`$${item.price[1]} | $${item.price[0]}`}
-											</span>
-										</div>
-										<p className={style.Description}>
-											{item.list.map((mod, index) => (`${mod}${index < item.list.length - 1 ? ', ' : ''}`))}
-										</p>
-										<p className={style.Description}>
-											{item.description}
-										</p>
-									</div>
-									<Separator
-										my="3"
-										size="4"
-										className={style.Separator}
-									/>
-								</li>
-							))}
-						</ul>
-					</div>
-				</div>
+								<p className={style.Description}>
+									{item.list.map((mod, index) => (`${mod}${index < item.list.length - 1 ? ', ' : ''}`))}
+								</p>
+								<p className={style.Description}>
+									{item.description}
+								</p>
+							</div>
+							<Separator
+								my="3"
+								size="4"
+								className={style.Separator}
+							/>
+						</li>
+					))}
+				</ul>
 			</div>
-
-			{/* Signature Pies */}
-			{/* <div className="relative">
-				<div className="flex flex-col xl:flex-row xl:mx-10 xl:gap-5">
-					<div
-						className="px-5 z-10 flex flex-col items-center"
-						style={{ backgroundColor: 'var(--gray-5)' }}
-					>
-						<h1 className="text-2xl text-center">Signature Pies</h1>
-						<Separator className={style.SectionSeparator} />
-						<ul>
-							{menu.pizzas.pies.map((pizza, index) => (
-								<li key={index}>
-									<div className={style.Item}>
-										<div className="flex justify-between">
-											<span className={style.ItemName}>
-												{pizza.name}
-											</span>
-											<span className={style.Price}>
-												${pizza.price[0]} | $
-												{pizza.price[1]}
-											</span>
-										</div>
-										<p className={style.Description}>
-											{pizza.description}
-										</p>
-									</div>
-									<Separator
-										my="3"
-										size="4"
-										className={style.Separator}
-									/>
-								</li>
-							))}
-						</ul>
-					</div>
-
-					<div className="flex inset-0 z-0">
-						<Image
-							className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
-							src="/background/pizza.jpg"
-							width={800}
-							height={400}
-							alt=""
-						/>
-					</div>
-				</div>
-			</div>
-
-			<div className="h-[500px]">Pizza Your Way</div> */}
 		</div>
 	);
 }
