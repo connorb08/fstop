@@ -6,7 +6,7 @@ export default function Food() {
     return (
         <div className={style.Food}>
             <Image
-                src="/background/pizza.jpg"
+                src="/images/chx-pizza.jpg"
                 alt=""
                 className="absolute inset-0 -z-10 h-full w-full object-cover"
                 height={800}

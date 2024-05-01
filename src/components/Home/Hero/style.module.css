@@ -1,5 +1,5 @@
 .Hero {
 	@apply relative isolate overflow-hidden py-24 sm:py-32;
-	@apply z-20;
+	@apply z-30;
 	min-height: 100vh;
 }

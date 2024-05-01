@@ -1,3 +1,4 @@
+import About from './About';
 import Food from './Food';
 import Hero from './Hero';
 import Wine from './Wine';
@@ -8,6 +9,7 @@ export default function Home() {
             <Hero />
             <Food />
             <Wine />
+            <About />
         </>
     );
 }

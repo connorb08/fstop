@@ -27,9 +27,11 @@ export default function FooodPage() {
                     Food: We offer hot coffee, breakfast sandwhiches and burritos, pizza
                     by the slice, and other great grab and go items.
                 </Text>
-                <Button className="max-w-fit">
-                    View our menu
-                </Button>
+                <Link href="/menu">
+                    <Button className="max-w-fit">
+                        View our menu
+                    </Button>
+                </Link>
             </Card>
 
         </div>
