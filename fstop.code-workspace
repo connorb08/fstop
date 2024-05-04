@@ -14,6 +14,11 @@
 		"editor.formatOnSave": true,
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.formatOnPaste": true,
+		"eslint.nodePath": ".yarn/sdks",
+		"eslint.codeActionsOnSave.mode": "all",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "always"
+		},
 		// File excludes
 		"files.exclude": {
 			"**/.git": true,

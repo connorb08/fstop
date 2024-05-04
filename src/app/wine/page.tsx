@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Fragment, useEffect, useState } from 'react';
 import { classNames } from '@/utils';
 import style from './style.module.scss';
+import Link from 'next/link';
 
 const sections = [
 	{
@@ -158,14 +159,15 @@ export default function Wine() {
 						Our Wines
 					</h2>
 					<p className="mt-4 text-white">
-						With over x wines in stock, we offer a wide selection of
-						wines from around the world.
+						With over 500 wines in stock, we offer a wide selection of
+						wine from around the world.
 						<br />
 						We offer custom curated cases of wine based on personal
 						taste and price range.
 						<br />
-						To inquire, call the store at (207) 289-3250, or email
-						foodstopwines@gmail.com.
+						To inquire, call the store at <Link href="tel:2072893250" className='text-[var(--mint-9)] hover:text-[var(--mint-10)]'>(207) 289-3250</Link>, or email {" "}
+						<Link href="mailto:foodstopwines@gmail.com" className='text-[var(--mint-9)] hover:text-[var(--mint-10)]'>foodstopwines@gmail.com</Link>.
+						<br />
 					</p>
 				</div>
 

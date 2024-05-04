@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import style from './style.module.scss';
 import Link from 'next/link';
+import type { PropsWithChildren } from 'react';
+import { classNames } from '@/utils';
 
-export default function Wine() {
+export default function Wine(props: PropsWithChildren<{ className?: string }>) {
     return (
-        <div className={style.Wine}>
+        <div className={classNames(style.Wine, props.className)}>
             <Image
                 src="/images/wine.jpg"
                 alt=""

@@ -33,6 +33,6 @@ export default function Footer() {
 				</Fragment>
 			))}
 		</ul>
-		<p className="copyright text-muted small">Copyright © {new Date().getFullYear()} Cumberland Foodstop. All Rights Reserved.</p>
+		<p>Copyright © {new Date().getFullYear()} Cumberland Foodstop. All Rights Reserved.</p>
 	</footer>
 }

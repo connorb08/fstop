@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import style from './style.module.scss';
 import Link from 'next/link';
+import type { PropsWithChildren } from 'react';
+import { classNames } from '@/utils';
 
-export default function About() {
+export default function About(props: PropsWithChildren<{ className?: string }>) {
     return (
-        <div className={style.About}>
+        <div className={classNames(style.About, props.className)}>
             <Image
                 src="/images/fortin.jpg"
                 alt=""
@@ -16,7 +18,7 @@ export default function About() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8 flex justify-end mt-40">
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl text-end">
-                        About
+                        About Us
                     </h2>
                     <Link href="/about">
                         <p className="mt-6 p-4 text-lg leading-8 text-white bg-white/5 rounded-xl hover:bg-white/20">

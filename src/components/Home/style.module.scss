@@ -1,0 +1,53 @@
+.Food,
+.Wine,
+.About,
+.Beer,
+.Grocery,
+.Butcher {
+	min-height: 90vh;
+	@apply relative isolate overflow-hidden bg-gray-900 py-24 sm:py-52;
+	animation: fade-in linear;
+	animation-timeline: view();
+	animation-range: entry;
+}
+
+.Hero {
+	z-index: 7;
+	@apply relative isolate overflow-hidden py-24 sm:py-32;
+	min-height: 100vh;
+}
+
+.Food {
+	z-index: 6;
+}
+
+.Wine {
+	z-index: 5;
+}
+
+.About {
+	z-index: 4;
+}
+
+.Beer {
+	z-index: 3;
+}
+
+.Grocery {
+	z-index: 2;
+}
+
+.Butcher {
+	z-index: 1;
+}
+
+@keyframes fade-in {
+	from {
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}

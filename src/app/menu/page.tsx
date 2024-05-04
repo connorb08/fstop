@@ -48,8 +48,9 @@ export default function Menu() {
 			<Box maxWidth="1024px" className="flex mx-5">
 				<Card size="2">
 					<Inset clip="padding-box" side="top" pb="current">
-						<Image
-							src="https://cumberland-foodstop.com/cdn-cgi/image/format=auto/https://bucket.cumberland-foodstop.com/specials.jpeg"
+						{/* eslint-disable-next-line @next/next/no-img-element */}
+						<img
+							src="https://connorbray.net/cdn-cgi/image/format=auto/https://fstop.connorbray.net/specials"
 							alt="Menu"
 							width={800}
 							height={600}
@@ -179,7 +180,7 @@ export default function Menu() {
 
 			</div>
 
-			{/* Panini & Wraps images */}
+			{/* Wraps & Panini images */}
 			<div className={style.MenuRow}>
 				<div className={style.MenuImageContainer}>
 					<div className="flex justify-center">
@@ -233,7 +234,8 @@ export default function Menu() {
 										{item.name}
 									</span>
 									<span className={style.Price}>
-										${item.price}
+										{(typeof item.price === "number") ? `$${item.price}` :
+											`$${item.price[0]} | $${item.price[1]}`}
 									</span>
 								</div>
 								<p className={style.Description}>
@@ -262,7 +264,8 @@ export default function Menu() {
 										{item.name}
 									</span>
 									<span className={style.Price}>
-										${item.price}
+										{(typeof item.price === "number") ? `$${item.price}` :
+											`$${item.price[0]} | $${item.price[1]}`}
 									</span>
 								</div>
 								<p className={style.Description}>
@@ -364,7 +367,7 @@ export default function Menu() {
 										{item.name}
 									</span>
 									<span className={style.Price}>
-										{(typeof item.price === "number") ? item.price :
+										{(typeof item.price === "number") ? `$${item.price}` :
 											`$${item.price[0]} | $${item.price[1]}`}
 									</span>
 								</div>

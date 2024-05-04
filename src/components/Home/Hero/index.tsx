@@ -2,6 +2,8 @@ import { NewspaperIcon, PhoneIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import style from "./style.module.css"
+import type { PropsWithChildren } from 'react';
+import { classNames } from '@/utils';
 
 const cards = [
 
@@ -25,9 +27,9 @@ const cards = [
 	},
 ];
 
-export default function Hero() {
+export default function Hero(props: PropsWithChildren<{ className?: string }>) {
 	return (
-		<div className={style.Hero}>
+		<div className={classNames(style.Hero, props.className)}>
 			<Image
 				src="/background/wine.jpg"
 				alt="Background image"

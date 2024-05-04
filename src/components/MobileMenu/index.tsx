@@ -2,9 +2,9 @@
 import { DropdownMenu, IconButton } from '@radix-ui/themes';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
-import style from './style.module.scss';
+import type { PropsWithChildren } from 'react';
 
-export default function MobileMenu() {
+export default function MobileMenu(props: PropsWithChildren<{ links: { href: string; text: string }[] }>) {
 	return (
 		<DropdownMenu.Root>
 			<DropdownMenu.Trigger>
@@ -13,15 +13,11 @@ export default function MobileMenu() {
 				</IconButton>
 			</DropdownMenu.Trigger>
 			<DropdownMenu.Content size={'2'}>
-				<DropdownMenu.Item>
-					<Link href="/menu">Menu</Link>
-				</DropdownMenu.Item>
-				<DropdownMenu.Item>
-					<Link href="/about">About</Link>
-				</DropdownMenu.Item>
-				<DropdownMenu.Item>
-					<Link href="/contact">Contact</Link>
-				</DropdownMenu.Item>
+				{props.links.map((link, index) => (
+					<DropdownMenu.Item key={index}>
+						<Link href={link.href}>{link.text}</Link>
+					</DropdownMenu.Item>
+				))}
 			</DropdownMenu.Content>
 		</DropdownMenu.Root>
 	);
