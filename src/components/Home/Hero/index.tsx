@@ -4,6 +4,7 @@ import Link from 'next/link';
 import style from "./style.module.css"
 import type { PropsWithChildren } from 'react';
 import { classNames } from '@/utils';
+import { facebook, telephone } from '@/utils/links';
 
 const cards = [
 
@@ -11,7 +12,7 @@ const cards = [
 		name: 'Contact Us',
 		description: <><p>(207) 829-3250</p><p>Mon-Fri: 6am-9pm</p><p>Sat: 7am-9pm</p></>,
 		icon: PhoneIcon,
-		href: "tel:207-829-3250"
+		href: telephone
 	},
 	{
 		name: 'Menu',
@@ -23,7 +24,7 @@ const cards = [
 		name: 'Facebook',
 		description: <p>Follow our Facebook page for the most up to date info</p>,
 		icon: NewspaperIcon,
-		href: "https://www.facebook.com/CFoodstop/"
+		href: facebook
 	},
 ];
 

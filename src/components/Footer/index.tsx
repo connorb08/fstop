@@ -12,13 +12,13 @@ const links = [
 		href: "/menu"
 	},
 	{
+		name: "Wine",
+		href: "/wine"
+	},
+	{
 		name: "About",
 		href: "/about"
 	},
-	{
-		name: "Contact",
-		href: "/contact"
-	}
 ]
 
 export default function Footer() {

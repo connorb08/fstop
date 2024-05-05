@@ -101,15 +101,17 @@ const sections = [
 ];
 
 const images = [
-	'/images/wine/wine1.jpg',
-	'/images/wine/wine2.jpg',
-	'/images/wine.jpg',
+	'/images/wine/wine-1.jpg',
+	'/images/wine/wine-2.jpg',
+	'/images/wine/wine-3.jpg',
+	'/images/wine/wine-4.jpg',
 ];
 
 export default function Wine() {
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 	const [slideshowStarted, setSlideshowStarted] = useState(false);
 
+	// Rotate background image
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setSlideshowStarted(true);

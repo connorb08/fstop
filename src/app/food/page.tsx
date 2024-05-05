@@ -4,10 +4,13 @@ import Link from "next/link";
 import SimpleImageSlider from "react-simple-image-slider";
 
 const images = [
-    { url: "images/P1250471.jpg" },
-    { url: "images/P1250491.jpg" },
-    { url: "images/P1250505.jpg" },
-    { url: "images/pastries.jpg" },
+    { url: "/images/P1250471.jpg" },
+    { url: "/images/P1250491.jpg" },
+    { url: "/images/P1250505.jpg" },
+    { url: "/images/food/pastries.jpg" },
+    { url: "/images/food/grabngo.jpg" },
+    { url: "/images/food/bec.jpg" },
+    { url: "/images/food/coffee-breakfast.jpg" },
 ];
 
 export default function FooodPage() {
@@ -21,11 +24,7 @@ export default function FooodPage() {
                         images={images}
                         showBullets={true}
                         showNavs={true}
-                        style={{
-                            left: 0
-                        }}
                     />
-                    {/* <img src="images/pastries.jpg" className="w-[200px]" /> */}
                 </Inset>
                 <div className="p-5 pt-0 flex flex-col gap-3 items-center">
                     <Text as="p" size="3">
