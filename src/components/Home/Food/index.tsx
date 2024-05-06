@@ -1,18 +1,17 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import style from "./style.module.scss"
 import type { PropsWithChildren } from 'react'
 import { classNames } from '@/utils'
+import { imageResize } from '@/utils/links'
 
 export default function Food(props: PropsWithChildren<{ className?: string }>) {
     return (
         <div className={classNames(style.Food, props.className)}>
-            <Image
-                src="/images/chx-pizza.jpg"
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+                src={imageResize(`/images/chx-pizza.jpg`, ['format=auto', 'quality=75', 'width=1280'])}
                 alt=""
                 className="absolute inset-0 -z-10 h-full w-full object-cover"
-                height={800}
-                width={800}
             />
             <div className='absolute h-full w-full bg-black/50 -z-10 inset-0'></div>
             <div className="mx-auto max-w-7xl px-6 lg:px-8">

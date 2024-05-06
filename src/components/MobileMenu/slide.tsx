@@ -18,7 +18,7 @@ export default function MobileMenu(props: PropsWithChildren<{ links: { href: str
     const [menuOpen, setMenuOpen] = useState(false);
 
     return <>
-        <IconButton onClick={() => setMenuOpen(!menuOpen)} className="p-2 text-white">
+        <IconButton onClick={() => setMenuOpen(!menuOpen)} className="p-2 text-white" aria-label="open menu">
             <HamburgerMenuIcon width={20} height={20} />
         </IconButton>
 

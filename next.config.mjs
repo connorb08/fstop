@@ -16,6 +16,11 @@ const nextConfig = {
 				hostname: 'cumberland-foodstop.com',
 				pathname: '/**',
 			},
+			{
+				protocol: 'https',
+				hostname: 'fstop.connorbray.net',
+				pathname: '/**',
+			},
 		],
 	},
 };

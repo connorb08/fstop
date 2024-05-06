@@ -9,11 +9,12 @@ export async function GET() {
         if (specials === null) {
             return new Response("Error getting image.", { status: 500 });
         }
-        const image = await specials.blob()
+        const image = await specials.blob();
         return new Response(image, {
             status: 200, headers: {
                 "Content-Type": image.type,
-            }
+                "Cache-Control": "public, max-age=3600",
+            },
         });
 
     } catch (error) {

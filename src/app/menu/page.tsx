@@ -4,6 +4,7 @@ import menu from '@/data/menu';
 import { Box, Card, Inset, Text, Strong, Separator } from '@radix-ui/themes';
 import Image from 'next/image';
 import Link from 'next/link';
+import { imageResize, imageResizeDomain } from '@/utils/links';
 
 const tabs = [
 	{ name: 'Sides', href: '#sides', },
@@ -50,7 +51,7 @@ export default function Menu() {
 					<Inset clip="padding-box" side="top" pb="current">
 						{/* eslint-disable-next-line @next/next/no-img-element */}
 						<img
-							src="https://connorbray.net/cdn-cgi/image/format=auto/https://fstop.connorbray.net/specials"
+							src={`${imageResizeDomain}/format=auto,quality=75,w=1200,h=900/specials`}
 							alt="Menu"
 							width={800}
 							height={600}
@@ -163,11 +164,12 @@ export default function Menu() {
 					<div className="flex justify-center">
 						<Card size="2" className={style.ImageCard}>
 							<Inset clip="padding-box" side="top" pb="current">
-								<Image
+								{/* eslint-disable-next-line @next/next/no-img-element */}
+								<img
 									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
-									src="/images/P1250505.jpg"
-									width={1200}
-									height={600}
+									src={imageResize(`/images/P1250505.jpg`, ['width=1200', 'height=600', 'format=auto', 'quality=75'])}
+									width={800}
+									height={400}
 									alt="cheeseburger deluxe"
 								/>
 							</Inset>
@@ -186,9 +188,10 @@ export default function Menu() {
 					<div className="flex justify-center">
 						<Card size="2" className={style.ImageCard}>
 							<Inset clip="padding-box" side="top" pb="current">
-								<Image
+								{/* eslint-disable-next-line @next/next/no-img-element */}
+								<img
 									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
-									src="/images/P1250491.jpg"
+									src={imageResize(`/images/P1250491.jpg`, ['width=1200', 'height=600', 'format=auto', 'quality=75'])}
 									width={800}
 									height={400}
 									alt=""
@@ -205,9 +208,11 @@ export default function Menu() {
 					<div className="flex justify-center">
 						<Card size="2" className={style.ImageCard}>
 							<Inset clip="padding-box" side="top" pb="current">
-								<Image
+								{/* eslint-disable-next-line @next/next/no-img-element */}
+								<img
 									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
-									src="/images/P1250471.jpg"
+									// src={`/images/P1250471.jpg`}
+									src={imageResize(`/images/P1250471.jpg`, ['width=800', 'height=400', 'format=auto', 'quality=75'])}
 									width={800}
 									height={400}
 									alt=""
@@ -290,7 +295,7 @@ export default function Menu() {
 							<Inset clip="padding-box" side="top" pb="current">
 								<Image
 									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
-									src="/images/P1250491.jpg"
+									src={`/images/P1250491.jpg`}
 									width={800}
 									height={400}
 									alt=""
@@ -309,7 +314,7 @@ export default function Menu() {
 							<Inset clip="padding-box" side="top" pb="current">
 								<Image
 									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
-									src="/background/pizza.jpg"
+									src={`/background/pizza.jpg`}
 									width={800}
 									height={400}
 									alt=""
