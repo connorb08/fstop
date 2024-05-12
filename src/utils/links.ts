@@ -16,23 +16,3 @@ export const imageResize = (path: string, options?: string[]): string => {
 const normalizeSrc = (src: string) => {
 	return src.startsWith('/') ? src.slice(1) : src;
 };
-
-export async function cloudflareLoader({
-	src,
-	width,
-	quality,
-}: {
-	src: string;
-	width: number;
-	quality?: number;
-}) {
-	'use server';
-	const params = [`width=${width}`];
-	if (quality) {
-		params.push(`quality=${quality}`);
-	}
-	params.push('format=auto');
-	const paramsString = params.join(',');
-
-	return `/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`;
-}

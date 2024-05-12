@@ -1,9 +1,10 @@
 'use client';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Fragment, useEffect, useState } from 'react';
 import { classNames } from '@/utils';
 import style from './style.module.scss';
 import Link from 'next/link';
+import CloudflareImage from '@/components/CloudflareImage';
 
 const sections = [
 	{
@@ -128,13 +129,36 @@ export default function Wine() {
 			<div aria-hidden="true" className="relative">
 				{images.map((image, index, arr) => {
 					return (
-						<Image
+						// <Image
+						// 	key={index}
+						// 	src={image}
+						// 	alt=""
+						// 	height={0}
+						// 	width={0}
+						// 	sizes="100vw"
+						// 	className={classNames(
+						// 		style.Image,
+						// 		slideshowStarted
+						// 			? index === currentImageIndex
+						// 				? style.SlideIn
+						// 				: index === currentImageIndex - 1 ||
+						// 					(index === arr.length - 1 &&
+						// 						currentImageIndex === 0)
+						// 					? style.SlideOut
+						// 					: 'hidden'
+						// 			: index === currentImageIndex
+						// 				? ''
+						// 				: 'hidden'
+						// 	)}
+						// />
+						<CloudflareImage
 							key={index}
 							src={image}
 							alt=""
-							height={0}
-							width={0}
-							sizes="100vw"
+							// height={0}
+							width={1280}
+							// sizes="100vw"
+							options={["q=75"]}
 							className={classNames(
 								style.Image,
 								slideshowStarted

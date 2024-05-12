@@ -1,10 +1,10 @@
 import { NewspaperIcon, PhoneIcon } from '@heroicons/react/20/solid';
-import Image from 'next/image';
 import Link from 'next/link';
 import style from "./style.module.css"
 import type { PropsWithChildren } from 'react';
 import { classNames } from '@/utils';
 import { facebook, telephone } from '@/utils/links';
+import CloudflareImage from '@/components/CloudflareImage';
 
 const cards = [
 
@@ -31,7 +31,7 @@ const cards = [
 export default function Hero(props: PropsWithChildren<{ className?: string }>) {
 	return (
 		<div className={classNames(style.Hero, props.className)}>
-			<Image
+			{/* <Image
 				src="/background/wine.jpg"
 				alt="Background image"
 				width={0}
@@ -39,6 +39,15 @@ export default function Hero(props: PropsWithChildren<{ className?: string }>) {
 				sizes="100vw"
 				className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
 				priority
+			/> */}
+			<CloudflareImage
+				src="/background/wine.jpg"
+				alt=""
+				className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
+				width={1280}
+				options={["q=75"]}
+				fetchPriority='high'
+				loading="eager"
 			/>
 			<div className='absolute h-full w-full bg-black/50 -z-10 inset-0'></div>
 			<div className="mx-auto max-w-7xl px-6 lg:px-8 h-full flex flex-col justify-center items-end">

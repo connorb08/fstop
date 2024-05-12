@@ -1,18 +1,18 @@
-import Image from 'next/image';
 import style from './style.module.scss';
 import Link from 'next/link';
 import type { PropsWithChildren } from 'react';
 import { classNames } from '@/utils';
+import CloudflareImage from '@/components/CloudflareImage';
 
 export default function About(props: PropsWithChildren<{ className?: string }>) {
     return (
         <div className={classNames(style.About, props.className)}>
-            <Image
+            <CloudflareImage
                 src="/images/fortin.jpg"
                 alt=""
                 className="absolute inset-0 -z-10 h-full w-full object-cover"
-                height={800}
-                width={800}
+                width={1280}
+                options={["q=75"]}
             />
             <div className="absolute h-full w-full bg-black/50 -z-10 inset-0"></div>
             <div className="mx-auto max-w-7xl px-6 lg:px-8 flex justify-end mt-40">
