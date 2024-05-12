@@ -28,7 +28,7 @@ export default function ButcherPage() {
                 </Inset>
                 <div className={style.Content}>
                     <Text as="p" size="3">
-                        Our butcher shop is a full-service meat counter offering a wide selection of fresh, never frozen, high-quality meats. We offer a variety of cuts, including steaks, chops, roasts, and more. Our knowledgeable staff is always available to help you select the perfect cut for your needs. We also offer a selection of house-made sausages, burgers, and other prepared meats. Whether you're looking for a special cut for a special occasion or just need something quick and easy for dinner, we have you covered.
+                        {"Our butcher shop is a full-service meat counter offering a wide selection of fresh, never frozen, high-quality meats. We offer a variety of cuts, including steaks, chops, roasts, and more. Our knowledgeable staff is always available to help you select the perfect cut for your needs. We also offer a selection of house-made sausages, burgers, and other prepared meats. Whether you're looking for a special cut for a special occasion or just need something quick and easy for dinner, we have you covered."}
                     </Text>
                 </div>
             </Card>
