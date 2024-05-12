@@ -17,7 +17,7 @@ export default function About() {
                 />
             </div>
             <div className='absolute inset-0 sm:bg-black/50'></div>
-            <div className="relative sm:absolute my-10 flex flex-col gap-2 items-center">
+            <div className="relative sm:absolute my-10 flex flex-col gap-4 items-center sm:bg-black/50 sm:p-5 sm:rounded-lg">
                 <p className="text-center">
                     We are located at 318 Main St, Cumberland, ME.
                 </p>

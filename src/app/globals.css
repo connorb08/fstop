@@ -16,3 +16,7 @@ body {
 		text-wrap: balance;
 	}
 }
+
+.rsis-container div {
+	background-position: center;
+}

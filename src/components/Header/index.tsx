@@ -1,7 +1,7 @@
 import { Heading, Text } from '@radix-ui/themes';
 import style from './style.module.scss';
 import Link from 'next/link';
-import MobileMenu2 from "@/components/MobileMenu/slide";
+import MobileMenu from "@/components/MobileMenu";
 
 const links = [
 	{
@@ -11,6 +11,10 @@ const links = [
 	{
 		href: '/wine',
 		text: 'Wine',
+	},
+	{
+		href: '/beer',
+		text: 'Beer',
 	},
 	{
 		href: '/about',
@@ -33,12 +37,8 @@ export default function Header() {
 						</Link>
 					))}
 				</span>
-				{/* Mobile Menu */}
-				{/* <span className="block sm:hidden">
-					<MobileMenu links={links} />
-				</span> */}
 				<span className="block sm:hidden">
-					<MobileMenu2 links={links} />
+					<MobileMenu links={links} />
 				</span>
 			</div>
 		</div>

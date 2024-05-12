@@ -4,7 +4,7 @@
 	align-items: center;
 	background-color: var(--gray-3);
 	color: white;
-	min-height: 10vh;
+	// min-height: 10vh;
 	@apply px-20;
 	@apply py-8;
 
@@ -16,5 +16,9 @@
 	ul {
 		display: flex;
 		@apply gap-5;
+	}
+
+	p {
+		text-align: center;
 	}
 }
