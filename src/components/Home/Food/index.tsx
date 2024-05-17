@@ -2,16 +2,18 @@ import Link from 'next/link'
 import style from "./style.module.scss"
 import type { PropsWithChildren } from 'react'
 import { classNames } from '@/utils'
-import { imageResize } from '@/utils/links'
+import CloudflareImage from '@/components/CloudflareImage'
 
 export default function Food(props: PropsWithChildren<{ className?: string }>) {
     return (
         <div className={classNames(style.Food, props.className)}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-                src={imageResize(`/images/chx-pizza.jpg`, ['format=auto', 'quality=75', 'width=1280'])}
+            <CloudflareImage
+                src="/images/chx-pizza.jpg"
                 alt=""
                 className="absolute inset-0 -z-10 h-full w-full object-cover"
+                width={1280}
+                options={["q=75"]}
+                loading="lazy"
             />
             <div className='absolute h-full w-full bg-black/50 -z-10 inset-0'></div>
             <div className="mx-auto max-w-7xl px-6 lg:px-8">

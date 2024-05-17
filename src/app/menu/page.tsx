@@ -269,8 +269,8 @@ export default function Menu() {
 										{item.name}
 									</span>
 									<span className={style.Price}>
-										{(typeof item.price === "number") ? `$${item.price}` :
-											`$${item.price[0]} | $${item.price[1]}`}
+										{(item.price) ? (typeof item.price === "number") ? `$${item.price}` :
+											`$${item.price[0]} | $${item.price[1]}` : ""}
 									</span>
 								</div>
 								<p className={style.Description}>

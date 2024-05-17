@@ -27,39 +27,40 @@ interface PizzaModifications {
 	description: string;
 }
 
+// Update pizza menu board (1st) and panini + grill (3rd)
 export const menu: Menu = {
 	sides: [
 		{
 			name: 'Chicken Tenders',
-			price: 8.99,
+			price: 9.99,
 			description:
 				'Crispy chicken tenders served with your choice of dipping sauce.',
 		},
 		{
 			name: 'Boardwalk Fries',
-			price: 3.99,
+			price: 4.99,
 			description: 'Classic Fries served with ketchup and salt + pepper.',
 		},
 		{
 			name: 'Rosemary Fries',
-			price: 4.99,
+			price: 5.99,
 			description:
 				'French fries tossed in rosemary and olive oil. Topped with flakey sea salt.',
 		},
 		{
 			name: 'Onion Rings',
-			price: 5.99,
+			price: 6.99,
 			description: 'Classic onion rings served with ketchup.',
 		},
 		{
 			name: 'Mozzarella Sticks',
-			price: 5.99,
+			price: 6.99,
 			description:
 				'Golden fried mozzarella sticks served with marinara sauce.',
 		},
 		{
 			name: 'Poutine',
-			price: 6.99,
+			price: 7.99,
 			description:
 				'French fries smothered in beef gravy with melted cheddar and cheese curds. Add meat for $2.',
 		},
@@ -67,44 +68,61 @@ export const menu: Menu = {
 	salads: [
 		{
 			name: 'Caesar',
-			price: 5.99,
+			price: 6.99,
 			description:
 				'Romaine, croutons, and asiago cheese. Served with Caesar dressing.',
 		},
 		{
 			name: 'Garden',
-			price: 5.99,
+			price: 7.49,
 			description:
 				'Romaine, tomato, green pepper, mushroom, red onion, cucumber, and shredded carrots.',
 		},
 		{
 			name: 'Greek',
-			price: 7.49,
+			price: 8.99,
 			description:
 				'Mix of romaine and spinach, tomato, cucumber, feta cheese, red onion, and olives.',
 		},
 		{
-			name: 'Add Grilled Chicken or Tuna',
+			name: 'Chicken or Tuna Salad',
 			price: 3.49,
+			description: '',
+		},
+		{
+			name: 'Grilled Chicken',
+			price: 4.49,
 			description: '',
 		},
 	],
 	wraps_and_subs: [
 		{
 			name: 'Greely Institute Wrap',
-			price: 8.99,
+			price: 9.99,
 			description:
 				'Creamy ceasar dressing, asiago cheese, croutons, grilled chicken, and romaine.',
 		},
 		{
 			name: 'Buffalo Chicken Wrap',
-			price: 9.99,
+			price: 10.49,
 			description:
 				'Fried chicken tossed in buffalo sauce, romaine, and ranch.',
 		},
 		{
+			name: 'Greek Chicken Wrap',
+			price: 10.99,
+			description:
+				'Spiced chicken, lettuce, spinich, olives, cucumber, tomato, red onion, feta, and Greek dressing.',
+		},
+		{
+			name: 'Falafel Wrap',
+			price: 10.99,
+			description:
+				'House made falafel, lettuce, pickled red onion, tomato, and Moroccan mayo.',
+		},
+		{
 			name: 'Prince Memorial Wrap',
-			price: 8.99,
+			price: 10.49,
 			description: 'Cranberry walnut chicken salad and romaine.',
 		},
 		{
@@ -119,28 +137,28 @@ export const menu: Menu = {
 		},
 		{
 			name: 'Tuna or Chicken Salad',
-			price: [9.99, 7.49],
+			price: [10.49, 7.99],
 			description: '',
 		},
 		{
 			name: 'Spicy Thai Wrap',
-			price: 10.49,
+			price: 10.99,
 			description:
 				'Fried chicken tossed in spicy thai sauce, picked carrots, cucumber, and mixed greens.',
 		},
 		{
 			name: 'Turkey Italian',
-			price: [9.49, 6.99],
-			description: '',
-		},
-		{
-			name: 'Poorboy',
-			price: [6.99, 5.49],
+			price: [10.49, 7.99],
 			description: '',
 		},
 		{
 			name: 'Subsitute a gluten free bun',
-			price: 0.99,
+			price: 1.99,
+			description: '',
+		},
+		{
+			name: 'Subsitute any protien with house made falafel',
+			price: 0,
 			description: '',
 		},
 	],
@@ -153,7 +171,7 @@ export const menu: Menu = {
 		},
 		{
 			name: 'Caprese',
-			price: 9.49,
+			price: 9.99,
 			description:
 				'Fresh mozzarella, tomato, basil, olive oil, and balsamic glaze on a torta bun.',
 		},
@@ -172,11 +190,11 @@ export const menu: Menu = {
 			name: 'Veggie Philly',
 			price: [10.99, 7.49],
 			description:
-				'Veggie based crumbles, peppers, onion, mushrooms, and fajita spice on a sub roll, with or without cheese.',
+				'Veggie based chorizo, peppers, onion, mushrooms, and fajita spice on a sub roll, with or without cheese.',
 		},
 		{
 			name: 'Cuban',
-			price: 9.49,
+			price: 9.99,
 			description:
 				'Sliced pork, swiss, house spicy pickle, and spicy mustard on a torta bun.',
 		},
@@ -188,7 +206,7 @@ export const menu: Menu = {
 		},
 		{
 			name: 'Pulled Pork',
-			price: 8.99,
+			price: 9.49,
 			description:
 				'House smoked pulled pork, sweet slaw, on a torta bun with a choice of traditional, carolina, and bourbon BBQ sauce.',
 		},
@@ -203,11 +221,21 @@ export const menu: Menu = {
 			description:
 				'House smoked pastrami, jalapeño mayo, spicy mustard, and swiss on a torta bun.',
 		},
+		{
+			name: 'Subsitute a gluten free bun',
+			price: 1.99,
+			description: '',
+		},
+		{
+			name: 'Subsitute any protien with house made falafel',
+			price: 0,
+			description: '',
+		},
 	],
 	burgers: [
 		{
 			name: 'Classic',
-			price: 10.99,
+			price: 10.49,
 			description:
 				'American cheese, lettuce, tomato, onion, sweet pickles, and StopSauce.',
 		},
@@ -234,6 +262,16 @@ export const menu: Menu = {
 			price: 11.99,
 			description:
 				'American cheese, BBQ pulled pork, onion rings, and StopSauce.',
+		},
+		{
+			name: 'Subsitute a gluten free bun',
+			price: 1.99,
+			description: '',
+		},
+		{
+			name: 'Subsitute an impossible burger patty',
+			price: 1.49,
+			description: '',
 		},
 	],
 	pizzas: {
@@ -274,7 +312,7 @@ export const menu: Menu = {
 		pies: [
 			{
 				name: 'Cheeseburger Deluxe',
-				price: [20.99, 11.99],
+				price: [21.99, 12.49],
 				description:
 					'American & pizza cheese blend, mayo, hamburger, bacon, and red onion. Topped with mustard and ketchup.',
 			},
@@ -308,7 +346,7 @@ export const menu: Menu = {
 			},
 			{
 				name: 'Veggie',
-				price: [21.99, 12.49],
+				price: [22.99, 13.49],
 				description: 'Mushroom, onion, green peppers, and olives.',
 			},
 			{
@@ -319,14 +357,14 @@ export const menu: Menu = {
 			},
 			{
 				name: 'Buffalo or BBQ Chicken',
-				price: [20.99, 11.99],
+				price: [21.99, 12.49],
 				description: '',
 			},
 			{
-				name: 'The Danimal',
-				price: [20.99, 11.99],
+				name: '5 Cheese',
+				price: [19.99, 12.49],
 				description:
-					'Diced ham, salami, and pepperoni with minced garlic.',
+					'Garlic butter, moozzarella, cheddar, provolone, ricotta, and romano cheese.',
 			},
 		],
 	},

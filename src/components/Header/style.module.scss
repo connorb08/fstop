@@ -7,6 +7,10 @@
 		@apply flex items-center justify-between;
 		@apply mx-10;
 
+		@media (max-width: 640px) {
+			@apply mx-5;
+		}
+
 		.End {
 			@apply flex;
 			@apply gap-4;

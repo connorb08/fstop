@@ -31,19 +31,10 @@ const cards = [
 export default function Hero(props: PropsWithChildren<{ className?: string }>) {
 	return (
 		<div className={classNames(style.Hero, props.className)}>
-			{/* <Image
-				src="/background/wine.jpg"
-				alt="Background image"
-				width={0}
-				height={0}
-				sizes="100vw"
-				className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
-				priority
-			/> */}
 			<CloudflareImage
 				src="/background/wine.jpg"
 				alt=""
-				className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
+				className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
 				width={1280}
 				options={["q=75"]}
 				fetchPriority='high'

@@ -5,12 +5,12 @@ import style from "./style.module.scss"
 
 const images = [
     { url: "/images/meat.jpg" },
-    { url: "/images/P1250491.jpg" },
-    { url: "/images/P1250505.jpg" },
-    { url: "/images/food/pastries.jpg" },
-    { url: "/images/food/grabngo.jpg" },
-    { url: "/images/food/bec.jpg" },
-    { url: "/images/food/coffee-breakfast.jpg" },
+    // { url: "/images/P1250491.jpg" },
+    // { url: "/images/P1250505.jpg" },
+    // { url: "/images/food/pastries.jpg" },
+    // { url: "/images/food/grabngo.jpg" },
+    // { url: "/images/food/bec.jpg" },
+    // { url: "/images/food/coffee-breakfast.jpg" },
 ];
 
 export default function ButcherPage() {

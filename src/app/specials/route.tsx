@@ -13,7 +13,7 @@ export async function GET() {
         return new Response(image, {
             status: 200, headers: {
                 "Content-Type": image.type,
-                "Cache-Control": "public, max-age=3600",
+                "Cache-Control": "public, max-age=600",
             },
         });
 

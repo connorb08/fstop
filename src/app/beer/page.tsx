@@ -7,85 +7,83 @@ const sections = [
     {
         name: 'Local',
         list: [
-            "Allagash",
-            "Barrled Souls",
-            "Baxter",
-            "Belleflower",
-            "Boothbay",
-            "Brewery Extrava",
-            "Brickyard Hollow",
-            "Bunker",
-            "Cushnoc",
-            "Definitve",
-            "Flight Deck",
-            "Fore River",
-            "Foulmouthed",
-            "Foundation",
-            "Funky Bow",
-            "Gearys",
-            "Gneiss",
-            "Lone Pine",
-            "Mast Landing",
-            "Orono Brewing Company",
-            "Oxbow",
-            "Peak Organic",
-            "Rising Tide",
-            "Sebago Brewing Company",
-            "Shipyard",
-            "Woodland Farms",]
-
+            'Allagash', 'Austin Street',
+            'Barrled Souls', 'Batson River',
+            'Battery Steele', 'Baxter',
+            'Belleflower', 'Bissell Brothers',
+            'Boothbay', 'Brickyard Hollow',
+            'Brickyard Hollow', 'Bunker',
+            'Cushnoc', 'Definitve',
+            'Flight Deck', 'Foundation',
+            'Gearys', 'Lone Pine',
+            'Mast Landing', 'Northwoods',
+            'Orono Brewing Company', 'Oxbow',
+            'Peak Organic', 'Rising Tide',
+            'Sacred Profane', 'Sebago Brewing Company',
+            'Shipyard', 'Woodland Farms'
+        ]
     },
+
     {
         name: 'Out of State',
         list: [
-            "Bell's",
-            "Bitburger",
-            "Black Hog",
-            "Burlington Beer Company",
-            "Cigar City",
-            "Elysion",
-            "Finback",
-            "Founders",
-            "Hoof Hearted",
-            "Lagunitas",
+            'Abomination',
+            'Bitburger',
+            'Black Hog',
+            'Burlington Beer Company',
+            'Daura',
+            'Drekker',
+            'Elysion',
+            'Equilibrium',
+            'Finback',
+            'Founders',
+            'Hoof Hearted',
             "Lawson's Finest Liquids",
-            "Long Trail",
-            "Lord Hobo",
-            "Moat Mountain",
-            "Radiant Pig",
-            "Schilling",
-            "Sierra Nevada",
-            "Spencer",
-            "Stoneface",
-            "Switchback]",
+            'Lord Hobo',
+            'Moat Mountain',
+            'Moosehead',
+            'Other Half',
+            'Resilience',
+            'Russian River',
+            'Schilling',
+            'Shed',
+            'Sierra Nevada',
+            'Stoneface',
+            'Switchback',
+            'Trillium',
+            'Tripping Animals',
+            'Tucker'
+        ]
+    },
+    {
+        name: 'Seltzer & Ready to Drink Cocktails',
+        list: [
+            'Cutwater',
+            'High Noon',
+            'Links Drinks',
+            'Long Drink',
+            'Maine Craft Distilling',
+            'Merican Mule',
+            'Nutrl',
+            'Three of Strong',
+            'Truly',
+            'White Claw',
+            'Wild Maine'
         ]
     },
     {
         name: 'Cider',
-        list: [
-            "Bantam",
-            "Cider Creek",
-            "Downeast",
-            "Norumbega",
-            "Stowe",
-        ]
-    },
-    {
-        name: 'Seltzer',
-        list: ["Bud Light Seltzer", "Truly", "White Claw"]
-    },
-    {
-        name: 'Gluten Free',
-        list: ["Departed Soles"
-            , "Groundbreaker"]
+        list: ["Carlson's Cider", 'Downeast', 'Norumbega', 'Stowe']
     },
     {
         name: 'Non-Alcoholic',
-        list: ["Athletic", "Wellbeing"]
+        list: ['Athletic', 'Eighteen Twenty Brewing', 'Partake']
     },
 ];
 
 export default function Beer() {
+
+    console.log(sections[4].list.sort());
 
     return (
         <div className="bg-[var(--gray-5)]">

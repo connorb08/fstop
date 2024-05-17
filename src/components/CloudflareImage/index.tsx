@@ -16,6 +16,16 @@ export default function CloudflareImage(props: PropsWithChildren<CloudflareImage
     if (props.width) {
         options.push(`w=${props.width}`);
     }
+
+    if (process.env.NODE_ENV === "development") {
+        // @ts-expect-error - img element
+        return <img
+            {...props}
+            src={props.src}
+            alt={props.alt}
+        />
+    }
+
     return (
         // @ts-expect-error - img element
         <img

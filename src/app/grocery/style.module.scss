@@ -15,7 +15,12 @@
 		}
 
 		li {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			padding: 10px;
+			margin-left: 20px;
+			margin-right: 20px;
 			h2 {
 				@apply text-lg;
 				@apply font-bold;

@@ -13,6 +13,7 @@ export default function Beer(props: PropsWithChildren<{ className?: string }>) {
                 className="absolute inset-0 -z-10 h-full w-full object-cover"
                 width={1280}
                 options={["q=75"]}
+                loading="lazy"
             />
             <div className="absolute h-full w-full bg-black/50 -z-10 inset-0"></div>
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
