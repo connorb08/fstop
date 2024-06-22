@@ -128,7 +128,7 @@ export const menu: Menu = {
 		{
 			name: 'Traditional Italian',
 			price: [8.99, 6.49],
-			description: 'Cranberry walnut chicken salad and romaine.',
+			description: '',
 		},
 		{
 			name: 'BLT',

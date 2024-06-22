@@ -3,6 +3,4 @@ pages_build_output_dir = ".vercel/output/static"
 compatibility_date = "2024-03-04"
 compatibility_flags = ["nodejs_compat"]
 
-r2_buckets  = [
-  { binding = "BUCKET", bucket_name = "fstop"},
-]
+r2_buckets = [{ binding = "BUCKET", bucket_name = "fstop" }]
