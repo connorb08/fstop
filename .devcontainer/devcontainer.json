@@ -16,5 +16,12 @@
 			]
 		}
 	},
-	"postStartCommand": "yarn install"
+	"postStartCommand": "pnpm install",
+	"mounts": [
+		{
+			"source": "${localEnv:HOME}/Library/pnpm/store",
+			"target": "${containerWorkspaceFolder}/.pnpm-store",
+			"type": "bind"
+		}
+	]
 }
