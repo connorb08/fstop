@@ -4,7 +4,7 @@ import { Theme } from '@radix-ui/themes';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-import './globals.css';
+import '../globals.css';
 import '@radix-ui/themes/styles.css';
 
 const inter = Inter({ subsets: ['latin'] });

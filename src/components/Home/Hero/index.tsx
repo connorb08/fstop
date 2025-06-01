@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { PropsWithChildren } from 'react';
 import { classNames } from '@/utils';
 import { facebook, telephone } from '@/utils/links';
-import CloudflareImage from '@/components/CloudflareImage';
+import Image from 'next/image';
 
 const cards = [
 	{
@@ -37,7 +37,7 @@ const cards = [
 export default function Hero(props: PropsWithChildren<{ className?: string }>) {
 	return (
 		<div className={classNames(props.className)}>
-			<CloudflareImage
+			{/* <CloudflareImage
 				src="/background/wine.jpg"
 				alt=""
 				className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
@@ -45,6 +45,15 @@ export default function Hero(props: PropsWithChildren<{ className?: string }>) {
 				options={['q=75']}
 				fetchPriority="high"
 				loading="eager"
+			/> */}
+			<Image
+				src="/background/wine.jpg"
+				alt="A high quality bottle of wine and a ribeye steak on a table"
+				className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+				quality={65}
+				fetchPriority="high"
+				loading="eager"
+				fill={true}
 			/>
 			<div className="absolute h-full w-full bg-black/50 -z-10 inset-0"></div>
 			<div className="mx-auto max-w-7xl px-6 lg:px-8 h-full flex flex-col justify-center items-end">

@@ -1,12 +1,16 @@
 import { Heading, Text } from '@radix-ui/themes';
 import style from './style.module.scss';
 import Link from 'next/link';
-import MobileMenu from "@/components/MobileMenu";
+import MobileMenu from '@/components/MobileMenu';
 
 const links = [
 	{
 		href: '/menu',
 		text: 'Menu',
+	},
+	{
+		href: '/order',
+		text: 'Order',
 	},
 	{
 		href: '/wine',
@@ -20,7 +24,7 @@ const links = [
 		href: '/about',
 		text: 'About',
 	},
-]
+];
 
 export default function Header() {
 	return (

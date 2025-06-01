@@ -1,12 +1,9 @@
-@reference "tailwindcss";
-
 .Footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--gray-3);
 	color: white;
-	// min-height: 10vh;
 	@apply px-20;
 	@apply py-8;
 
