@@ -1,3 +1,5 @@
+@reference "tailwindcss";
+
 .Header {
 	@apply p-4;
 	background-color: var(--gray-3);

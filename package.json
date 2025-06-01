@@ -3,43 +3,37 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
+		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"pages:build": "npx @cloudflare/next-on-pages",
-		"preview": "yarn pages:build && wrangler pages dev .vercel/output/static --compatibility-flags=\"nodejs_compat\"",
-		"deploy": "yarn pages:build && wrangler pages deploy"
+		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
 	},
 	"dependencies": {
-		"@heroicons/react": "^2.1.1",
+		"@heroicons/react": "^2.2.0",
+		"@opennextjs/cloudflare": "^1.1.0",
 		"@radix-ui/colors": "^3.0.0",
-		"@radix-ui/react-icons": "^1.3.0",
-		"@radix-ui/themes": "^3.0.2",
-		"next": "14.2.3",
-		"react": "^18",
-		"react-dom": "^18",
-		"react-simple-image-slider": "^2.4.1",
-		"sharp": "^0.33.2"
+		"@radix-ui/react-icons": "^1.3.2",
+		"@radix-ui/themes": "^3.2.1",
+		"next": "15.3.2",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"react-simple-image-slider": "^2.4.1"
 	},
 	"devDependencies": {
-		"@cloudflare/next-on-pages": "^1.11.1",
-		"@cloudflare/workers-types": "^4.20240423.0",
+		"@eslint/eslintrc": "^3",
 		"@types/node": "^20",
-		"@types/react": "^18.2.79",
-		"@types/react-dom": "^18.2.25",
-		"@typescript-eslint/eslint-plugin": "^7.8.0",
-		"@typescript-eslint/parser": "^7.8.0",
-		"autoprefixer": "^10.4.18",
-		"eslint": "^8",
-		"eslint-config-next": "14.1.0",
-		"eslint-plugin-next-on-pages": "^1.10.0",
-		"postcss": "^8",
-		"sass": "^1.71.1",
-		"tailwindcss": "^3.4.1",
-		"typescript": "^5.4.5",
-		"vercel": "^33.5.5",
-		"wrangler": "^3.52.0"
-	},
-	"packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"autoprefixer": "^10.4.21",
+		"eslint": "^9",
+		"eslint-config-next": "15.3.2",
+		"postcss": "^8.5.4",
+		"sass": "^1.89.1",
+		"tailwindcss": "^3.4.17",
+		"typescript": "^5",
+		"wrangler": "^4.18.0"
+	}
 }
