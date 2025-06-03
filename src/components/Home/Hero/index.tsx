@@ -2,7 +2,7 @@ import { NewspaperIcon, PhoneIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
 import type { PropsWithChildren } from 'react';
 import { classNames } from '@/utils';
-import { facebook, telephone } from '@/utils/links';
+import { facebook, orderLink, telephone } from '@/utils/links';
 import Image from 'next/image';
 
 const cards = [
@@ -23,6 +23,14 @@ const cards = [
 		description: <p>View our menu</p>,
 		icon: NewspaperIcon,
 		href: '/menu',
+		prefetch: true,
+	},
+	{
+		name: 'Order',
+		description: <p>Place an online order for pickup</p>,
+		icon: NewspaperIcon,
+		href: orderLink,
+		prefetch: true,
 	},
 	{
 		name: 'Facebook',
@@ -71,12 +79,13 @@ export default function Hero(props: PropsWithChildren<{ className?: string }>) {
 						person and discover something delicious today.
 					</p>
 				</div>
-				<div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+				<div className="w-full mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-8">
 					{cards.map((card) => (
 						<Link
 							href={card.href}
 							key={card.name}
 							className="flex gap-x-4 rounded-xl bg-black/50 p-6 ring-1 ring-inset ring-white/10 hover:bg-black/75"
+							prefetch={card.prefetch}
 						>
 							<card.icon
 								className="h-7 w-5 flex-none"

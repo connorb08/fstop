@@ -1,10 +1,10 @@
-import { getRequestContext } from '@cloudflare/next-on-pages';
+import { getCloudflareContext } from '@opennextjs/cloudflare';
 
 export const runtime = 'edge';
 
 export async function GET() {
 	try {
-		const bucket = getRequestContext().env.BUCKET;
+		const bucket = getCloudflareContext().env.BUCKET;
 		const specials = await bucket.get('specials.jpeg');
 		if (specials === null) {
 			return new Response('Error getting image.', { status: 500 });

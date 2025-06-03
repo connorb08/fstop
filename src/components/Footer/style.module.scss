@@ -15,6 +15,16 @@
 	ul {
 		display: flex;
 		@apply gap-5;
+
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			text-align: center;
+			@apply gap-3;
+
+			li.Separator {
+				display: none;
+			}
+		}
 	}
 
 	p {

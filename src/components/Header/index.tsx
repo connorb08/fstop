@@ -2,6 +2,7 @@ import { Heading, Text } from '@radix-ui/themes';
 import style from './style.module.scss';
 import Link from 'next/link';
 import MobileMenu from '@/components/MobileMenu';
+import { orderLink } from '@/utils/links';
 
 const links = [
 	{
@@ -9,7 +10,7 @@ const links = [
 		text: 'Menu',
 	},
 	{
-		href: '/order',
+		href: orderLink,
 		text: 'Order',
 	},
 	{

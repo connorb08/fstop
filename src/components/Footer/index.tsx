@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import style from './style.module.scss';
 import { Fragment } from 'react';
+import { orderLink } from '@/utils/links';
 
 const links = [
 	{
@@ -13,7 +14,7 @@ const links = [
 	},
 	{
 		name: 'Order',
-		href: '/order',
+		href: orderLink,
 	},
 	{
 		name: 'Wine',
@@ -35,7 +36,9 @@ export default function Footer() {
 						<li>
 							<Link href={link.href}>{link.name}</Link>
 						</li>
-						{index < arr.length - 1 ? <li>⋅</li> : null}
+						{index < arr.length - 1 ? (
+							<li className={style.Separator}>⋅</li>
+						) : null}
 					</Fragment>
 				))}
 			</ul>

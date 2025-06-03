@@ -1,36 +1,54 @@
 import { classNames } from '@/utils';
 import style from './style.module.scss';
 import menu from '@/data/menu';
-import { Box, Card, Inset, Text, Strong, Separator } from '@radix-ui/themes';
+import {
+	Box,
+	Card,
+	Inset,
+	Text,
+	Strong,
+	Separator,
+	Button,
+} from '@radix-ui/themes';
 import Image from 'next/image';
 import Link from 'next/link';
-import { imageResize, imageResizeDomain } from '@/utils/links';
+import { imageResize, imageResizeDomain, orderLink } from '@/utils/links';
 
 const tabs = [
-	{ name: 'Sides', href: '#sides', },
-	{ name: 'Salads', href: '#salads', },
-	{ name: 'Burgers', href: '#burgers', },
-	{ name: 'Panini & Grill', href: '#grill', },
-	{ name: 'Wraps & Subs', href: '#subs', },
-	{ name: 'Pizza', href: '#pizza', },
-]
+	{ name: 'Sides', href: '#sides' },
+	{ name: 'Salads', href: '#salads' },
+	{ name: 'Burgers', href: '#burgers' },
+	{ name: 'Panini & Grill', href: '#grill' },
+	{ name: 'Wraps & Subs', href: '#subs' },
+	{ name: 'Pizza', href: '#pizza' },
+];
 
 function TabNav() {
-
 	return (
-		<div className='flex-1 flex justify-center mb-10'>
+		<div className="flex-1 flex justify-center mb-10">
 			<div className="flex sm:w-full lg:w-3/4 xl:w-1/2">
-				<nav className="flex-1 isolate grid grid-cols-3 sm:grid-cols-6 divide-x divide-y rounded-lg shadow divide-[var(--gray-4)]" aria-label="Tabs">
+				<nav
+					className="flex-1 isolate grid grid-cols-3 sm:grid-cols-6 divide-x divide-y rounded-lg shadow divide-[var(--gray-4)]"
+					aria-label="Tabs"
+				>
 					{tabs.map((tab, tabIdx) => (
 						<Link
 							key={tab.name}
 							href={tab.href}
 							className={classNames(
 								'text-white',
-								tabIdx === 0 ? 'rounded-tl-lg sm:rounded-l-lg border-l border-t border-[var(--gray-4)]' : '',
-								tabIdx === 2 ? 'rounded-tr-lg sm:rounded-none' : '',
-								tabIdx === 3 ? "rounded-bl-lg sm:rounded-none" : "",
-								tabIdx === tabs.length - 1 ? 'rounded-br-lg sm:rounded-r-lg' : '',
+								tabIdx === 0
+									? 'rounded-tl-lg sm:rounded-l-lg border-l border-t border-[var(--gray-4)]'
+									: '',
+								tabIdx === 2
+									? 'rounded-tr-lg sm:rounded-none'
+									: '',
+								tabIdx === 3
+									? 'rounded-bl-lg sm:rounded-none'
+									: '',
+								tabIdx === tabs.length - 1
+									? 'rounded-br-lg sm:rounded-r-lg'
+									: '',
 								'group relative min-w-0 flex-1 overflow-hidden py-4 px-4 text-center text-sm font-medium bg-[var(--gray-8)] hover:bg-[var(--gray-10)] focus:z-10'
 							)}
 						>
@@ -40,7 +58,7 @@ function TabNav() {
 				</nav>
 			</div>
 		</div>
-	)
+	);
 }
 
 export default function Menu() {
@@ -65,10 +83,15 @@ export default function Menu() {
 				</Card>
 			</Box>
 
-			<div className='w-full flex mt-10'>
-				<TabNav />
+			<div className="mt-10">
+				<Link href={orderLink} prefetch={true}>
+					<Button size={'3'}>Order Now</Button>
+				</Link>
 			</div>
 
+			<div className="w-full flex mt-10">
+				<TabNav />
+			</div>
 
 			<div className={style.MenuRow}>
 				<div className={style.MenuSection} id="sides">
@@ -100,7 +123,9 @@ export default function Menu() {
 					</ul>
 				</div>
 				<div className={style.MenuSection}>
-					<h1 className={style.MenuHeader} id="salads">Salads</h1>
+					<h1 className={style.MenuHeader} id="salads">
+						Salads
+					</h1>
 					<Separator className={style.SectionSeparator} />
 					<ul>
 						{menu.salads.map((salad, index) => (
@@ -167,7 +192,12 @@ export default function Menu() {
 								{/* eslint-disable-next-line @next/next/no-img-element */}
 								<img
 									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
-									src={imageResize(`/images/P1250505.jpg`, ['width=1200', 'height=600', 'format=auto', 'quality=75'])}
+									src={imageResize(`/images/P1250505.jpg`, [
+										'width=1200',
+										'height=600',
+										'format=auto',
+										'quality=75',
+									])}
 									width={800}
 									height={400}
 									alt="cheeseburger deluxe"
@@ -179,7 +209,6 @@ export default function Menu() {
 						</Card>
 					</div>
 				</div>
-
 			</div>
 
 			{/* Wraps & Panini images */}
@@ -191,7 +220,12 @@ export default function Menu() {
 								{/* eslint-disable-next-line @next/next/no-img-element */}
 								<img
 									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
-									src={imageResize(`/images/P1250491.jpg`, ['width=1200', 'height=600', 'format=auto', 'quality=75'])}
+									src={imageResize(`/images/P1250491.jpg`, [
+										'width=1200',
+										'height=600',
+										'format=auto',
+										'quality=75',
+									])}
 									width={800}
 									height={400}
 									alt=""
@@ -212,7 +246,12 @@ export default function Menu() {
 								<img
 									className="aspect-[3/2] w-full bg-gray-50 object-cover xl:inset-0 xl:aspect-auto xl:h-full"
 									// src={`/images/P1250471.jpg`}
-									src={imageResize(`/images/P1250471.jpg`, ['width=800', 'height=400', 'format=auto', 'quality=75'])}
+									src={imageResize(`/images/P1250471.jpg`, [
+										'width=800',
+										'height=400',
+										'format=auto',
+										'quality=75',
+									])}
 									width={800}
 									height={400}
 									alt=""
@@ -228,7 +267,9 @@ export default function Menu() {
 
 			{/* Panini & Grill */}
 			<div className={style.MenuSectionGrid}>
-				<h1 className={style.MenuHeader} id="grill">Panini & Grill</h1>
+				<h1 className={style.MenuHeader} id="grill">
+					Panini & Grill
+				</h1>
 				<Separator className={style.SectionSeparator} />
 				<ul>
 					{menu.grill_items.map((item, index) => (
@@ -239,8 +280,9 @@ export default function Menu() {
 										{item.name}
 									</span>
 									<span className={style.Price}>
-										{(typeof item.price === "number") ? `$${item.price}` :
-											`$${item.price[0]} | $${item.price[1]}`}
+										{typeof item.price === 'number'
+											? `$${item.price}`
+											: `$${item.price[0]} | $${item.price[1]}`}
 									</span>
 								</div>
 								<p className={style.Description}>
@@ -269,8 +311,11 @@ export default function Menu() {
 										{item.name}
 									</span>
 									<span className={style.Price}>
-										{(item.price) ? (typeof item.price === "number") ? `$${item.price}` :
-											`$${item.price[0]} | $${item.price[1]}` : ""}
+										{item.price
+											? typeof item.price === 'number'
+												? `$${item.price}`
+												: `$${item.price[0]} | $${item.price[1]}`
+											: ''}
 									</span>
 								</div>
 								<p className={style.Description}>
@@ -341,8 +386,7 @@ export default function Menu() {
 										{pizza.name}
 									</span>
 									<span className={style.Price}>
-										${pizza.price[0]} | $
-										{pizza.price[1]}
+										${pizza.price[0]} | ${pizza.price[1]}
 									</span>
 								</div>
 								<p className={style.Description}>
@@ -372,12 +416,20 @@ export default function Menu() {
 										{item.name}
 									</span>
 									<span className={style.Price}>
-										{(typeof item.price === "number") ? `$${item.price}` :
-											`$${item.price[0]} | $${item.price[1]}`}
+										{typeof item.price === 'number'
+											? `$${item.price}`
+											: `$${item.price[0]} | $${item.price[1]}`}
 									</span>
 								</div>
 								<p className={style.Description}>
-									{item.list.map((mod, index) => (`${mod}${index < item.list.length - 1 ? ', ' : ''}`))}
+									{item.list.map(
+										(mod, index) =>
+											`${mod}${
+												index < item.list.length - 1
+													? ', '
+													: ''
+											}`
+									)}
 								</p>
 								<p className={style.Description}>
 									{item.description}

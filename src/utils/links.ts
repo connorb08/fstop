@@ -1,5 +1,6 @@
 export const facebook = 'https://www.facebook.com/CFoodstop/';
 export const telephone = 'tel:207-829-3250';
+export const orderLink = 'https://cumberlandfoodstop.hrpos.heartland.us/menu';
 
 export const imageResizeDomain = 'https://fstop.connorbray.net/cdn-cgi/image';
 

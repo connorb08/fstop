@@ -158,20 +158,20 @@ export default function Wine() {
 							// height={0}
 							width={1280}
 							// sizes="100vw"
-							options={["q=75"]}
+							options={['q=75']}
 							className={classNames(
 								style.Image,
 								slideshowStarted
 									? index === currentImageIndex
 										? style.SlideIn
 										: index === currentImageIndex - 1 ||
-											(index === arr.length - 1 &&
+										  (index === arr.length - 1 &&
 												currentImageIndex === 0)
-											? style.SlideOut
-											: 'hidden'
-									: index === currentImageIndex
-										? ''
+										? style.SlideOut
 										: 'hidden'
+									: index === currentImageIndex
+									? ''
+									: 'hidden'
 							)}
 						/>
 					);
@@ -185,14 +185,27 @@ export default function Wine() {
 						Our Wines
 					</h2>
 					<p className="mt-4 text-white">
-						With over 500 wines in stock, we offer a wide selection of
-						wine from around the world.
+						With over 500 wines in stock, we offer a wide selection
+						of wine from around the world.
 						<br />
 						We offer custom curated cases of wine based on personal
 						taste and price range.
 						<br />
-						To inquire, call the store at <Link href="tel:2072893250" className='text-[var(--mint-9)] hover:text-[var(--mint-10)]'>(207) 289-3250</Link>, or email {" "}
-						<Link href="mailto:foodstopwines@gmail.com" className='text-[var(--mint-9)] hover:text-[var(--mint-10)]'>foodstopwines@gmail.com</Link>.
+						To inquire, call the store at{' '}
+						<Link
+							href="tel:2072893250"
+							className="text-[var(--mint-9)] hover:text-[var(--mint-10)]"
+						>
+							(207) 289-3250
+						</Link>
+						, or email{' '}
+						<Link
+							href="mailto:foodstopwines@gmail.com"
+							className="text-[var(--mint-9)] hover:text-[var(--mint-10)]"
+						>
+							foodstopwines@gmail.com
+						</Link>
+						.
 						<br />
 					</p>
 				</div>
