@@ -1,3 +1,4 @@
+'use client';
 import { classNames } from '@/utils';
 import style from './style.module.scss';
 import menu from '@/data/menu';
