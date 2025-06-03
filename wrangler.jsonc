@@ -16,7 +16,7 @@
 	],
 	"routes": [
 		{
-			"pattern": "next.cumberland-foodstop.com",
+			"pattern": "cumberland-foodstop.com",
 			"custom_domain": true
 		}
 	],
