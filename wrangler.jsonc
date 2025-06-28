@@ -18,6 +18,14 @@
 		{
 			"pattern": "cumberland-foodstop.com",
 			"custom_domain": true
+		},
+		{
+			"pattern": "www.cumberland-foodstop.com",
+			"custom_domain": true
+		},
+		{
+			"pattern": "fstop.connorbray.net",
+			"custom_domain": true
 		}
 	],
 	"observability": {
