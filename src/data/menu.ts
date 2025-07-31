@@ -68,7 +68,7 @@ export const menu: Menu = {
 	salads: [
 		{
 			name: 'Caesar',
-			price: 6.99,
+			price: 7.49,
 			description:
 				'Romaine, croutons, and asiago cheese. Served with Caesar dressing.',
 		},
@@ -85,12 +85,22 @@ export const menu: Menu = {
 				'Mix of romaine and spinach, tomato, cucumber, feta cheese, red onion, and olives.',
 		},
 		{
-			name: 'Chicken or Tuna Salad',
+			name: 'Add Chicken or Tuna Salad',
 			price: 3.49,
 			description: '',
 		},
 		{
-			name: 'Grilled Chicken',
+			name: 'Add Grilled Chicken',
+			price: 4.49,
+			description: '',
+		},
+		{
+			name: 'Add Bacon',
+			price: 1.99,
+			description: '',
+		},
+		{
+			name: 'Add House Falafel',
 			price: 4.49,
 			description: '',
 		},
@@ -98,47 +108,20 @@ export const menu: Menu = {
 	wraps_and_subs: [
 		{
 			name: 'Greely Institute Wrap',
-			price: 9.99,
+			price: 11.49,
 			description:
 				'Creamy ceasar dressing, asiago cheese, croutons, grilled chicken, and romaine.',
 		},
 		{
-			name: 'Buffalo Chicken Wrap',
-			price: 10.49,
-			description:
-				'Fried chicken tossed in buffalo sauce, romaine, and ranch.',
-		},
-		{
-			name: 'Greek Chicken Wrap',
-			price: 10.99,
-			description:
-				'Spiced chicken, lettuce, spinich, olives, cucumber, tomato, red onion, feta, and Greek dressing.',
-		},
-		{
-			name: 'Falafel Wrap',
-			price: 10.99,
-			description:
-				'House made falafel, lettuce, pickled red onion, tomato, and Moroccan mayo.',
-		},
-		{
 			name: 'Prince Memorial Wrap',
-			price: 10.49,
+			price: 11.49,
 			description: 'Cranberry walnut chicken salad and romaine.',
 		},
 		{
-			name: 'Traditional Italian',
-			price: [8.99, 6.49],
-			description: '',
-		},
-		{
-			name: 'BLT',
-			price: [8.99, 6.49],
-			description: 'Bacon, romaine, and tomato on a sub roll.',
-		},
-		{
-			name: 'Tuna or Chicken Salad',
-			price: [10.49, 7.99],
-			description: '',
+			name: 'Greek Chicken Wrap',
+			price: 11.49,
+			description:
+				'Spiced chicken, lettuce, spinich, olives, cucumber, tomato, red onion, feta, and Greek dressing.',
 		},
 		{
 			name: 'Spicy Thai Wrap',
@@ -147,9 +130,45 @@ export const menu: Menu = {
 				'Fried chicken tossed in spicy thai sauce, picked carrots, cucumber, and mixed greens.',
 		},
 		{
+			name: 'Buffalo Chicken Wrap',
+			price: 11.99,
+			description:
+				'Fried chicken tossed in buffalo sauce, romaine, and ranch.',
+		},
+		{
+			name: 'Falafel Wrap',
+			price: 11.49,
+			description:
+				'House made falafel, lettuce, pickled red onion, tomato, and Moroccan mayo.',
+		},
+		{
+			name: 'Traditional Italian',
+			price: [9.99, 7.49],
+			description:
+				'Ham, Salami, American Cheese, Onion, Olive, Tomato, Green Pepper and Pickles on a Sub Roll',
+		},
+		{
+			name: 'Veggie Italian',
+			price: [8.99, 6.49],
+			description:
+				'Lettuce, Tomato, Onion, Olives, Pickles, Green Peppers, American Cheese',
+		},
+		{
 			name: 'Turkey Italian',
-			price: [10.49, 7.99],
-			description: '',
+			price: [10.99, 8.49],
+			description:
+				'Sliced Turkey, American Cheese, Onion, Olive, Tomato, Green Pepper and Pickles on a Sub Roll',
+		},
+		{
+			name: 'BLT',
+			price: [9.99, 7.49],
+			description: 'Bacon, romaine, and tomato on a sub roll',
+		},
+		{
+			name: 'Tuna or Chicken Salad Italian',
+			price: [10.99, 8.49],
+			description:
+				'Tuna / Chicken Salad, American Cheese, Onion, Olive, Tomato, Green Pepper, and Pickles on a Sub Roll',
 		},
 		{
 			name: 'Subsitute a gluten free bun',
@@ -164,62 +183,70 @@ export const menu: Menu = {
 	],
 	grill_items: [
 		{
-			name: 'House Panini',
-			price: 10.49,
-			description:
-				'Mixed greens, tomato, pickled red onion, cheddar and StopSauce on a torta bun with choice of grilled chicken, sliced turkey, or sliced smoked brisket.',
-		},
-		{
-			name: 'Caprese',
-			price: 9.99,
-			description:
-				'Fresh mozzarella, tomato, basil, olive oil, and balsamic glaze on a torta bun.',
-		},
-		{
-			name: 'Chicken Philly',
-			price: [9.99, 6.99],
-			description:
-				'Peppers, onion, mushroom, fajita spice, and cheese on a sub roll.',
-		},
-		{
-			name: 'Steak & Cheese',
-			price: [11.99, 7.99],
-			description: 'Peppers, onion, mushroom, and cheese on a sub roll.',
-		},
-		{
 			name: 'Veggie Philly',
-			price: [10.99, 7.49],
+			price: [12.49, 8.49],
 			description:
-				'Veggie based chorizo, peppers, onion, mushrooms, and fajita spice on a sub roll, with or without cheese.',
+				'Veggie Based Chorizo, Peppers, Onions, Mushrooms and Cheese on a Sub Roll',
 		},
 		{
 			name: 'Cuban',
-			price: 9.99,
+			price: 10.49,
 			description:
-				'Sliced pork, swiss, house spicy pickle, and spicy mustard on a torta bun.',
+				'House Made Cuban Pork and Spicy Pickles, with Ham, Swiss and Spicy Mustard on a Telera Bun',
 		},
 		{
-			name: 'Chicken Parmigiana',
-			price: 9.99,
+			name: 'Roasted Pork',
+			price: 11.49,
 			description:
-				'Chicken tenders, marinara, and pizza cheese on a torta bun.',
-		},
-		{
-			name: 'Pulled Pork',
-			price: 9.49,
-			description:
-				'House smoked pulled pork, sweet slaw, on a torta bun with a choice of traditional, carolina, and bourbon BBQ sauce.',
-		},
-		{
-			name: 'Smoked Brisket',
-			price: 10.99,
-			description: 'Cheddar, BBQ, and caramelized onion on a torta bun.',
+				'House Roasted Pork, Banana Pepper Mayo, Swiss, and Spinach on a Sourdough Roll',
 		},
 		{
 			name: 'Pastrami',
-			price: 10.99,
+			price: 12.49,
 			description:
-				'House smoked pastrami, jalapeño mayo, spicy mustard, and swiss on a torta bun.',
+				'House Smoked Pastrami, Jalapeno Mayo, Spicy Mustard and Swiss Cheese on a Telera Bun',
+		},
+		{
+			name: 'Pulled Pork',
+			price: 9.99,
+			description:
+				'House Smoked Pulled Pork, Sweet Slaw, and your choice of BBQ Sauce on a Telera Bun',
+		},
+		{
+			name: 'Smoked Brisket Panini',
+			price: 12.49,
+			description:
+				'House Smoked Brisket, BBQ Sauce, Caramelized Onion and Cheddar Cheese on a Telera Bun',
+		},
+		{
+			name: 'House Panini',
+			price: 11.49,
+			description:
+				'Your choice of Grilled Chicken or Sliced Turkey on a Panini with Stop Sauce, Cheddar Cheese, Lettuce, Tomato, and Pickled Red Onion',
+		},
+		{
+			name: 'Caprese',
+			price: 11.49,
+			description:
+				'Fresh Mozzarella, Tomato, Nut Free Basil Pesto, Olive Oil and Balsamic Glaze on a Telera Bun',
+		},
+		{
+			name: 'Chicken Philly',
+			price: [10.49, 7.49],
+			description:
+				'Peppers, Onions, Mushrooms, Grilled Chicken with Fajita Spice and Cheese on a Sub Roll',
+		},
+		{
+			name: 'Steak & Cheese',
+			price: [12.99, 8.49],
+			description:
+				'Pepers, Onions, Mushrooms, Shaved Steak and Cheese on a Sub Roll',
+		},
+		{
+			name: 'Chicken Parmigiana',
+			price: 10.49,
+			description:
+				'Fried Chicken, Marinara and Pizza Cheese on a Telera Bun',
 		},
 		{
 			name: 'Subsitute a gluten free bun',
@@ -227,41 +254,42 @@ export const menu: Menu = {
 			description: '',
 		},
 		{
-			name: 'Subsitute any protien with house made falafel',
-			price: 0,
+			name: 'Subsitute a sourdough roll',
+			price: 1,
 			description: '',
 		},
 	],
 	burgers: [
 		{
 			name: 'Classic',
-			price: 10.49,
+			price: 10.99,
 			description:
-				'American cheese, lettuce, tomato, onion, sweet pickles, and StopSauce.',
-		},
-		{
-			name: 'Trailblazer',
-			price: 11.99,
-			description:
-				'Pepperjack cheese, bacon, lettuce, tomato, pickled jalapeños, and StopSauce.',
+				'American cheese, lettuce, tomato, onion, sweet pickles, and StopSauce',
 		},
 		{
 			name: 'Deluxe',
-			price: 11.99,
-			description:
-				'American cheese, bacon, lettuce, tomato, mayo, pepper relish, and sweet pickles.',
-		},
-		{
-			name: 'Ranger',
 			price: 12.49,
 			description:
-				'American cheese, bacon, lettuce, tomato, fries, caramelized onion, sweet pickles, and StopSauce.',
+				'American cheese, bacon, lettuce, tomato, mayo, pepper relish, and sweet pickles',
 		},
 		{
 			name: 'Cowboy',
-			price: 11.99,
+			price: 12.49,
 			description:
-				'American cheese, BBQ pulled pork, onion rings, and StopSauce.',
+				'House Ground Beef and Smoked Pulled Pork, American Cheese, BBQ Sauce, Stop Sauce and topped with Onion Rings',
+		},
+		{
+			name: 'Trailblazer',
+			price: 12.49,
+			description:
+				'Pepperjack Cheese, Bacon, Lettuce, Tomato, Pickled Jalapeno and Stop Sauce',
+		},
+
+		{
+			name: 'Ranger',
+			price: 12.99,
+			description:
+				'American Cheese, Bacon, Lettuce, Tomato, Fries, Caramelized Onion, Sweet Pickles and Stop Sauce',
 		},
 		{
 			name: 'Subsitute a gluten free bun',
@@ -278,22 +306,24 @@ export const menu: Menu = {
 		modifications: [
 			{
 				name: 'Cheese Pizza',
-				price: [14.99, 8.49],
+				price: [16.49, 9.99],
 				list: [],
 				description: "16' or 10' cheese pizza.",
 			},
 			{
-				name: 'Standard Toppings',
+				name: 'Veggie Toppings',
 				price: [2.49, 1.49],
 				list: [
-					'Pepperoni, Ham, Mushroom, Onion, Green Pepper, Kalamata Olive, Pineapple, Spinach, Tomato, Jalapeño, Garlic, Red Onion',
+					'Garlic, Green Peppers, Jalapenos, Mushroom, Olives, Onion, Pineapple, Red Onions, Spinach, Tomato',
 				],
 				description: '',
 			},
 			{
-				name: 'Premium Toppings',
-				price: [2.99, 1.99],
-				list: ['Bacon, Sausage, Chicken, Hamburger, Pesto'],
+				name: 'Meat Toppings',
+				price: [3.49, 2.49],
+				list: [
+					'Bacon, Sausage, Chicken, Hamburger, Pepperoni, Ham, Salami',
+				],
 				description: '',
 			},
 			{
@@ -304,7 +334,7 @@ export const menu: Menu = {
 			},
 			{
 				name: 'Gluten Free',
-				price: 1.99,
+				price: 2,
 				list: [],
 				description: 'Make any small into a gluten free crust.',
 			},
@@ -312,59 +342,65 @@ export const menu: Menu = {
 		pies: [
 			{
 				name: 'Cheeseburger Deluxe',
-				price: [21.99, 12.49],
+				price: [23.99, 13.99],
 				description:
 					'American & pizza cheese blend, mayo, hamburger, bacon, and red onion. Topped with mustard and ketchup.',
 			},
 			{
 				name: 'Pesto Besto',
-				price: [23.99, 14.49],
+				price: [24.99, 14.99],
 				description: 'Chicken, bacon, pesto, and tomato.',
 			},
 			{
 				name: 'Chicken Florentine',
-				price: [22.99, 13.49],
+				price: [23.99, 13.99],
 				description:
 					'Grilled chicken, spinach, farlic, tomato, and red onion.',
 			},
 			{
 				name: 'Loaded',
-				price: [24.99, 15.49],
+				price: [25.99, 15.99],
 				description:
-					'Pepperoni, sausage, hamburger, ham, mushroom, onion, green peppers, and olives.',
+					'Pepperoni, sausage, hamburger, ham, mushroom, onion, green peppers, and olives',
 			},
 			{
 				name: 'Meat Lovers',
-				price: [23.99, 14.49],
+				price: [24.99, 14.99],
 				description: 'Pepperoni, sausage, hamburger, and ham.',
 			},
 			{
 				name: 'Spicy Pulled Pork',
-				price: [22.99, 13.49],
+				price: [23.99, 13.99],
 				description:
-					'Bourbon BBQ, house smoked pulled pork, sriracha, pineapple, and cheddar cheese.',
+					'Bourbon BBQ, house smoked pulled pork, sriracha, pineapple, and cheddar cheese',
 			},
 			{
 				name: 'Veggie',
-				price: [22.99, 13.49],
-				description: 'Mushroom, onion, green peppers, and olives.',
+				price: [23.99, 13.99],
+				description: 'Mushroom, Onion, Green Peppers, and Olives',
 			},
 			{
 				name: 'Greek',
-				price: [23.99, 14.49],
+				price: [24.99, 14.99],
 				description:
-					'Sausage, feta cheese, spinach, tomato, and olives.',
+					'Light Sauce, Sausage, Spinach, Tomato, Olives, Feta and Pizza Cheese',
 			},
 			{
-				name: 'Buffalo or BBQ Chicken',
-				price: [21.99, 12.49],
-				description: '',
+				name: 'BBQ Chicken',
+				price: [22.99, 12.99],
+				description: 'BBQ Sauce Base, Diced White Chicken and Cheese',
+			},
+			{
+				name: 'Buffalo Chicken',
+				price: [22.99, 12.99],
+				description:
+					'Ranch Base, Diced White Chicken, Red Onion, Cheese and a Buffalo Drizzle',
 			},
 			{
 				name: '5 Cheese',
-				price: [19.99, 12.49],
+				price: [20.99, 12.99],
 				description:
-					'Garlic butter, moozzarella, cheddar, provolone, ricotta, and romano cheese.',
+					'Garlic Butter Base, Ricotta, Mozzarella, Cheddar, Provolone, and Romano Cheese',
 			},
 		],
 	},
